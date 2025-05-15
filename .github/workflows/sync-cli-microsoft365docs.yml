@@ -9,55 +9,83 @@ on:
 jobs:
   sync-docs:
     runs-on: ubuntu-latest
+    permissions: # Add this block to grant permissions
+      contents: write # Grant write permission for contents
 
     steps:
       - name: Checkout GodSpoon/LLM-ReferenceDocs
         uses: actions/checkout@v4
         with:
           path: ./llm-ref-docs
+          # You might need a personal access token here if the repo is private
+          # and default permissions are not sufficient, but typically 'contents: write' works for public repos.
+          # token: ${{ secrets.YOUR_PAT_NAME }}
 
-      - name: Checkout pnp/cli-microsoft365
+
+      - name: Checkout pnp/cli-microsoft366
         uses: actions/checkout@v4
         with:
-          repository: pnp/cli-microsoft365
+          repository: pnp/cli-microsoft366
           path: ./cli-m365-source
+          ref: main # Specify the branch you want to sync from
+          fetch-depth: 1 # Optimize by only fetching the latest commit
+
 
       - name: Prepare target directory
         run: |
-          mkdir -p ./llm-ref-docs/cli-microsoft365
-          # Clean up previous files if necessary, depending on desired behavior (add/update vs full sync)
-          # For a full sync, you might want to remove existing files before copying
-          # rm -rf ./llm-ref-docs/cli-microsoft365/*
+          TARGET_DIR="./llm-ref-docs/cli-microsoft365"
+          echo "Target directory: $TARGET_DIR"
+          mkdir -p "$TARGET_DIR"
+          # Optional: Clean up previous files before copying for a clean sync each time
+          # rm -rf "$TARGET_DIR"/*
+          # echo "Cleaned target directory."
+
 
       - name: Copy required files
         run: |
           SOURCE_DIR="./cli-m365-source/docs/docs"
           TARGET_DIR="./llm-ref-docs/cli-microsoft365"
+          echo "Source directory: $SOURCE_DIR"
+          echo "Copying files to: $TARGET_DIR"
 
-          # Copy .mdx, .json, and .ps1 files
+          # Copy .mdx, .json, and .ps1 files using rsync for potentially better handling of subdirectories if needed
+          # rsync -avm --include='*.mdx' --include='*.json' --include='*.ps1' -f 'hide,! */' "$SOURCE_DIR/" "$TARGET_DIR/"
+
+          # Or using find, similar to before, which is simpler for a flat copy:
           find "$SOURCE_DIR" -type f \( -name "*.mdx" -o -name "*.json" -o -name "*.ps1" \) -exec cp {} "$TARGET_DIR/" \;
+          echo "Finished copying files."
+
 
       - name: Convert .mdx to .md
         run: |
           TARGET_DIR="./llm-ref-docs/cli-microsoft365"
-          cd "$TARGET_DIR"
+          echo "Converting .mdx to .md in: $TARGET_DIR"
+          cd "$TARGET_DIR" || exit 1 # Exit if directory change fails
+          shopt -s nullglob # Allow loop to not run if no .mdx files are found
           for file in *.mdx; do
-            if [ -f "$file" ]; then # Check if file exists (handles case where no .mdx files are found)
-              mv "$file" "${file%.mdx}.md"
-            fi
+            echo "Converting $file..."
+            mv "$file" "${file%.mdx}.md"
           done
+          echo "Finished converting files."
+
 
       - name: Commit and push changes
         run: |
-          cd ./llm-ref-docs
+          cd ./llm-ref-docs || exit 1 # Exit if directory change fails
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add cli-microsoft365
+
           git status
-          # Check if there are changes to commit
-          if ! git diff --cached --quiet; then
+
+          # Check if there are changes in the staged files
+          git diff --cached --exit-code || has_changes=$?
+
+          if [ "$has_changes" -eq 0 ]; then
+            echo "No changes to commit."
+          else
+            echo "Changes detected. Committing..."
+            git add cli-microsoft365
             git commit -m 'Sync CLI Microsoft 365 documentation'
             git push
-          else
-            echo "No changes to commit."
+            echo "Changes committed and pushed."
           fi
