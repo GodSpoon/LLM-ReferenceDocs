@@ -29,52 +29,71 @@ jobs:
 
       - name: Prepare target directory
         run: |
+          # Create the base directory if it doesn't exist
           mkdir -p ./llm-ref-docs/cli-microsoft365
-          # Clean up previous files if necessary, depending on desired behavior (add/update vs full sync)
-          # For a full sync, you might want to remove existing files before copying
-          # rm -rf ./llm-ref-docs/cli-microsoft365/*
 
-      - name: Copy required files
+          # Clean the target directory to remove files that might no longer exist in source
+          # But save the git directory
+          find ./llm-ref-docs/cli-microsoft365 -mindepth 1 -delete
+
+      - name: Mirror directory structure and copy files
         run: |
           SOURCE_DIR="./cli-m365-source/docs/docs"
           TARGET_DIR="./llm-ref-docs/cli-microsoft365"
 
-          # Copy .mdx, .json, and .ps1 files
-          find "$SOURCE_DIR" -type f \( -name "*.mdx" -o -name "*.json" -o -name "*.ps1" \) -exec cp {} "$TARGET_DIR/" \;
-
-      - name: Convert .mdx to .md
-        run: |
-          TARGET_DIR="./llm-ref-docs/cli-microsoft365"
-          cd "$TARGET_DIR"
-          for file in *.mdx; do
-            if [ -f "$file" ]; then # Check if file exists (handles case where no .mdx files are found)
-              mv "$file" "${file%.mdx}.md"
+          # Create all directories from the source in the target
+          find "$SOURCE_DIR" -type d | while read -r dir; do
+            # Create the corresponding directory in the target
+            rel_dir="${dir#$SOURCE_DIR/}"
+            if [ "$rel_dir" != "$SOURCE_DIR" ]; then
+              mkdir -p "$TARGET_DIR/$rel_dir"
             fi
+          done
+
+          # Copy all .mdx, .json, and .ps1 files, preserving directory structure
+          find "$SOURCE_DIR" -type f \( -name "*.mdx" -o -name "*.json" -o -name "*.ps1" \) | while read -r file; do
+            # Get the relative path
+            rel_path="${file#$SOURCE_DIR/}"
+            # Create the target directory if it doesn't exist
+            target_dir=$(dirname "$TARGET_DIR/$rel_path")
+            mkdir -p "$target_dir"
+            # Copy the file
+            cp "$file" "$target_dir/"
+          done
+
+      - name: Convert .mdx to .md (preserving structure)
+        run: |
+          # Find all .mdx files in any subdirectory and convert them to .md
+          find ./llm-ref-docs/cli-microsoft365 -type f -name "*.mdx" | while read -r file; do
+            # Convert to .md extension
+            new_file="${file%.mdx}.md"
+            mv "$file" "$new_file"
           done
 
       - name: Sanitize documentation files
         run: |
-          TARGET_DIR="./llm-ref-docs/cli-microsoft365"
-          
-          # Replace Azure AD secrets patterns with placeholders
-          # This pattern covers most Azure AD secrets
-          find "$TARGET_DIR" -type f -name "*.md" -exec sed -i 's/\b[a-zA-Z0-9_~.-]\{40,\}\b/EXAMPLE_SECRET_VALUE_PLACEHOLDER/g' {} \;
-          
+          # Replace Azure AD secrets patterns with placeholders in all .md files
+          find ./llm-ref-docs/cli-microsoft365 -type f -name "*.md" -exec sed -i 's/\b[a-zA-Z0-9_~.-]\{40,\}\b/EXAMPLE_SECRET_VALUE_PLACEHOLDER/g' {} \;
+
           # Specific check for Azure AD secrets format in app-add.md
-          if [ -f "$TARGET_DIR/app-add.md" ]; then
-            sed -i 's/\b[a-zA-Z0-9]\{8\}-[a-zA-Z0-9]\{4\}-[a-zA-Z0-9]\{4\}-[a-zA-Z0-9]\{4\}-[a-zA-Z0-9]\{12\}\b/EXAMPLE-GUID-PLACEHOLDER/g' "$TARGET_DIR/app-add.md"
-            # Check lines 270 and 282 specifically
-            sed -i '270s/\(["'"'"'].*\)\(.*\)\(.*["'"'"']\)/\1EXAMPLE_SECRET_VALUE_PLACEHOLDER\3/' "$TARGET_DIR/app-add.md"
-            sed -i '282s/\(["'"'"'].*\)\(.*\)\(.*["'"'"']\)/\1EXAMPLE_SECRET_VALUE_PLACEHOLDER\3/' "$TARGET_DIR/app-add.md"
+          APP_ADD_FILES=$(find ./llm-ref-docs/cli-microsoft365 -type f -name "app-add.md")
+          if [ -n "$APP_ADD_FILES" ]; then
+            for file in $APP_ADD_FILES; do
+              # Replace GUIDs
+              sed -i 's/\b[a-zA-Z0-9]\{8\}-[a-zA-Z0-9]\{4\}-[a-zA-Z0-9]\{4\}-[a-zA-Z0-9]\{4\}-[a-zA-Z0-9]\{12\}\b/EXAMPLE-GUID-PLACEHOLDER/g' "$file"
+
+              # Check specific lines for secrets and sanitize them
+              # Note: This approach works if the file structure is consistent across runs
+              # For more robustness, we can search for patterns instead of specific line numbers
+              sed -i 's/\(["'"'"'].*secret.*["'"'"'][ ]*:[ ]*["'"'"']\)[^"'"'"']*\(["'"'"']\)/\1EXAMPLE_SECRET_VALUE_PLACEHOLDER\2/g' "$file"
+              sed -i 's/\(["'"'"'].*password.*["'"'"'][ ]*:[ ]*["'"'"']\)[^"'"'"']*\(["'"'"']\)/\1EXAMPLE_SECRET_VALUE_PLACEHOLDER\2/g' "$file"
+              sed -i 's/\(["'"'"'].*key.*["'"'"'][ ]*:[ ]*["'"'"']\)[^"'"'"']*\(["'"'"']\)/\1EXAMPLE_SECRET_VALUE_PLACEHOLDER\2/g' "$file"
+            done
           fi
-          
+
           # Add a disclaimer to the top of each file
-          for file in "$TARGET_DIR"/*.md; do
-            if [ -f "$file" ]; then
-              echo -e "<!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->\n$(cat "$file")" > "$file"
-            fi
-          done
-          
+          find ./llm-ref-docs/cli-microsoft365 -type f -name "*.md" -exec sh -c 'echo -e "<!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->\n$(cat "$0")" > "$0"' {} \;
+
           echo "Documentation files sanitized for GitHub push protection"
 
       - name: Commit and push changes
@@ -82,7 +101,7 @@ jobs:
           cd ./llm-ref-docs
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add cli-microsoft365
+          git add -A cli-microsoft365  # Use -A to include file deletions
           git status
           # Check if there are changes to commit
           if ! git diff --cached --quiet; then
