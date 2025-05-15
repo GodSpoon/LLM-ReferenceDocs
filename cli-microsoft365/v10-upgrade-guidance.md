@@ -1,4 +1,4 @@
-<!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
+-e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 # v10 Upgrade Guidance
 
 The v10 release of CLI for Microsoft 365 introduces several breaking changes. To assist you in upgrading to the latest version, we’ve outlined the changes and the actions you may need to take.

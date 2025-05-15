@@ -1,4 +1,4 @@
-<!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
+-e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import AsciinemaPlayer from '../src/components/AsciinemaPlayer';
 import 'asciinema-player/dist/bundle/asciinema-player.css';
 

@@ -1,4 +1,4 @@
-<!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
+-e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 # v9 Upgrade Guidance
 
 The v9 of CLI for Microsoft 365 introduces breaking change in default login method. To help you upgrade to the latest version of CLI for Microsoft 365, we've listed this change along with any actions you may need to take.

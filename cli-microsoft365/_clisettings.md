@@ -1,4 +1,4 @@
-<!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
+-e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 Setting name|Definition|Default value
 ------------|----------|-------------
 `authType`|Default login method to use when running `m365 login` without the `--authType` option.|`deviceCode`
