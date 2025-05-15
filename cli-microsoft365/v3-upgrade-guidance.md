@@ -1,4 +1,4 @@
-<!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
+-e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 # v3 Upgrade Guidance
 
 We recently announced that the next version of the Office 365 CLI will be v3 and is planned to be released on September 6, 2020.

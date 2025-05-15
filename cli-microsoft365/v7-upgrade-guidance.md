@@ -1,4 +1,4 @@
-<!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
+-e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -238,7 +238,7 @@ In the past versions of CLI for Microsoft 365, the command [teams meeting list](
 Microsoft Teams meeting\
 Join on your computer or mobile app\
 Click here to join the meeting\
-Learn More | Meeting options\XAMPLE_SECRET_VALUE_PLACEHOLDER",
+Learn More | Meeting options\\EXAMPLE_SECRET_VALUE_PLACEHOLDER",
       "importance": "normal",
       "sensitivity": "normal",
       "isAllDay": false,
