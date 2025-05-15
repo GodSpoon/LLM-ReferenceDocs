@@ -1,0 +1,76 @@
+<!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
+import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# spo homesite remove
+
+Removes the current Home Site
+
+## Usage
+
+```sh
+m365 spo homesite remove [options]
+```
+
+## Options
+
+```md definition-list
+`-f, --force`
+: Do not prompt for confirmation before removing the Home Site.
+```
+
+<Global />
+
+## Remarks
+
+:::info
+
+To use this command you must be either **SharePoint Administrator** or **Global Administrator**.
+
+:::
+
+## Examples
+
+Removes the current Home Site without confirmation.
+
+```sh
+m365 spo homesite remove --force
+```
+
+## Response
+
+<Tabs>
+  <TabItem value="JSON">
+
+  ```json
+  "https://contoso.sharepoint.com has been removed as a Home site. It may take some time for the change to apply. Check aka.ms/homesites for details."
+  ```
+
+  </TabItem>
+  <TabItem value="Text">
+
+  ```text
+  https://contoso.sharepoint.com has been removed as a Home site. It may take some time for the change to apply. Check aka.ms/homesites for details.
+  ```
+
+  </TabItem>
+  <TabItem value="CSV">
+
+  ```csv
+  https://contoso.sharepoint.com has been removed as a Home site. It may take some time for the change to apply. Check aka.ms/homesites for details.
+  ```
+
+  </TabItem>
+  <TabItem value="Markdown">
+
+  ```md
+  https://contoso.sharepoint.com has been removed as a Home site. It may take some time for the change to apply. Check aka.ms/homesites for details.
+  ```
+
+  </TabItem>
+</Tabs>
+
+## More information
+
+- SharePoint home sites, a landing for your organization on the intelligent intranet: [https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/EXAMPLE_SECRET_VALUE_PLACEHOLDER/ba-p/621933](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/EXAMPLE_SECRET_VALUE_PLACEHOLDER/ba-p/621933)
