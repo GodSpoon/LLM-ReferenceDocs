@@ -17,6 +17,14 @@ m365 spe containertype list [options]
 
 <Global />
 
+## Remarks
+
+:::info
+
+To use this command you must be either **SharePoint Administrator** or **Global Administrator**.
+
+:::
+
 ## Examples
 
 Retrieves a list of Container Types created for a SharePoint Embedded Application from the tenant.

@@ -25,6 +25,14 @@ m365 containertype get [options]
 
 <Global />
 
+## Remarks
+
+:::info
+
+To use this command you must be either **SharePoint Administrator** or **Global Administrator**.
+
+:::
+
 ## Examples
 
 Gets Container Type by id
