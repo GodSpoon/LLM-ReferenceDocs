@@ -20,6 +20,9 @@ m365 purview threatassessment get [options]
 : The Id of the threat assessment.
 
 `--includeResults`
+: (deprecated. Use option `withResults` instead) Include the threat assessment results.
+
+`--withResults`
 : Include the threat assessment results.
 ```
 
@@ -36,7 +39,7 @@ m365 purview threatassessment get --id c37d695e-d581-4ae9-82a0-9364eba4291e
 Get a threat assessment including results.
 
 ```sh
-m365 purview threatassessment get --id c37d695e-d581-4ae9-82a0-9364eba4291e --includeResults
+m365 purview threatassessment get --id c37d695e-d581-4ae9-82a0-9364eba4291e --withResults
 ```
 
 ## Response
@@ -119,9 +122,9 @@ m365 purview threatassessment get --id c37d695e-d581-4ae9-82a0-9364eba4291e --in
   </TabItem>
 </Tabs>
 
-### `includeResults` response
+### `withResults` response
 
-When we make use of the option `includeResults` the response will differ. 
+When we make use of the option `withResults` the response will differ. 
 
 <Tabs>
   <TabItem value="JSON">
@@ -185,7 +188,7 @@ When we make use of the option `includeResults` the response will differ.
   <TabItem value="Markdown">
 
   ```md
-  # purview threatassessment get --id "8aaba0ac-ec4d-4e62-5774-08db16c68731" --includeResults "true"
+  # purview threatassessment get --id "8aaba0ac-ec4d-4e62-5774-08db16c68731" --withResults "true"
 
   Date: 25/02/2023
 

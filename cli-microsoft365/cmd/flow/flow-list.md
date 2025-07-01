@@ -23,6 +23,9 @@ m365 flow list [options]
 : List a specific type of flows. Valid values: `ownedByMe`, `personal`, `sharedWithMe`, `all`. Defaults to `ownedByMe`. Don't specify this option when using asAdmin.
 
 `--includeSolutions`
+: (deprecated. Use option `withSolutions` instead) Include flows from solutions.
+
+`--withSolutions`
 : Include flows from solutions.
 
 `--asAdmin`
@@ -50,28 +53,28 @@ When you specify a value for `sharingStatus`, consider the following:
 
 ## Examples
 
-List all your flows in the given environment
+List all your flows in the given environment.
 
 ```sh
 m365 flow list --environmentName EXAMPLE_SECRET_VALUE_PLACEHOLDER
 ```
 
-List all flows in the given environment
+List all flows in the given environment.
 
 ```sh
 m365 flow list --environmentName EXAMPLE_SECRET_VALUE_PLACEHOLDER --asAdmin
 ```
 
-List all flows that are shared with the current user
+List all flows that are shared with the current user.
 
 ```sh
 m365 flow list --environmentName EXAMPLE_SECRET_VALUE_PLACEHOLDER --sharingStatus sharedWithMe
 ```
 
-List all personal flows and include flows from solutions
+List all personal flows and include flows from solutions.
 
 ```sh
-m365 flow list --environmentName EXAMPLE_SECRET_VALUE_PLACEHOLDER --sharingStatus personal --includeSolutions
+m365 flow list --environmentName EXAMPLE_SECRET_VALUE_PLACEHOLDER --sharingStatus personal --withSolutions
 ```
 
 ## Response

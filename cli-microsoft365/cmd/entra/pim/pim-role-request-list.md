@@ -35,6 +35,9 @@ m365 entra pim role request list [options]
 : An optional value to filter the list of requests. Allowed values are: `Canceled`, `Denied`, `Failed`, `Granted`, `PendingAdminDecision`, `PendingApproval`, `PendingProvisioning`, `PendingScheduleCreation`, `Provisioned`, `Revoked`, and `ScheduleCreated`.
 
 `--includePrincipalDetails`
+: (deprecated. Use option `withPrincipalDetails` instead) An optional flag to include details of the principals that were assigned a role.
+
+`--withPrincipalDetails`
 : An optional flag to include details of the principals that were assigned a role.
 ```
 
@@ -63,7 +66,7 @@ m365 entra pim role request list --createdDateTime 2024-01-01T00:00:00Z
 Get a list of PIM requests with principal details.
 
 ```sh
-m365 entra pim role request list --includePrincipalDetails
+m365 entra pim role request list --withPrincipalDetails
 ```
 
 Get a list of PIM requests with pending approvals.
@@ -159,9 +162,9 @@ m365 entra pim role request list --status PendingApproval
   </TabItem>
 </Tabs>
 
-### `includePrincipalDetails` response
+### `withPrincipalDetails` response
 
-When we make use of the option `includePrincipalDetails` the response will differ. 
+When we make use of the option `withPrincipalDetails` the response will differ. 
 
 <Tabs>
   <TabItem value="JSON">
@@ -239,7 +242,7 @@ When we make use of the option `includePrincipalDetails` the response will diffe
   <TabItem value="Markdown">
 
   ```md
-  # entra pim role request list --includePrincipalDetails "true"
+  # entra pim role request list --withPrincipalDetails "true"
 
   Date: 5/30/2024
 

@@ -27,10 +27,13 @@ m365 teams chat member add [options]
 : The role for the user to add. Valid values are: `owner`, `guest`. Defaults to `owner`.
 
 `--visibleHistoryStartDateTime [visibleHistoryStartDateTime]`
-: Include chat history until a certain point in time. Specify either `visibleHistoryStartDateTime`, `includeAllHistory`, or neither.
+: Include chat history until a certain point in time. Specify either `visibleHistoryStartDateTime`, `includeAllHistory`, `withAllHistory` or neither.
 
 `--includeAllHistory`
-: Include all chat history. Specify either `visibleHistoryStartDateTime`, `includeAllHistory`, or neither.
+: (deprecated. Use option `withChildTerms` instead) Include all chat history. Specify either `visibleHistoryStartDateTime`, `includeAllHistory`, `withAllHistory` or neither.
+
+`--withAllHistory`
+: Include all chat history. Specify either `visibleHistoryStartDateTime`, `includeAllHistory`, `withAllHistory` or neither.
 ```
 
 <Global />
@@ -59,7 +62,7 @@ m365 teams chat member add --chatId 19:EXAMPLE_SECRET_VALUE_PLACEHOLDER@unq.gbl.
 Add a guest member by UPN to a Teams chat and share all chat history.
 
 ```sh
-m365 teams chat member add --chatId 19:EXAMPLE_SECRET_VALUE_PLACEHOLDER@unq.gbl.spaces --userName nelson.wilke@fabrikam.com --role guest --includeAllHistory
+m365 teams chat member add --chatId 19:EXAMPLE_SECRET_VALUE_PLACEHOLDER@unq.gbl.spaces --userName nelson.wilke@fabrikam.com --role guest --withAllHistory
 ```
 
 ## Response

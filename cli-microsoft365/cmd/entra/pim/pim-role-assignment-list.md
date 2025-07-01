@@ -32,7 +32,10 @@ m365 entra pim role assignment list [options]
 : An optional ISO 8601 formatted date filter to search from.
 
 `--includePrincipalDetails`
-: An optional flag to include details of the principals that were assigned a role
+: (deprecated. Use option `withPrincipalDetails` instead) An optional flag to include details of the principals that were assigned a role.
+
+`--withPrincipalDetails`
+: An optional flag to include details of the principals that were assigned a role.
 ```
 
 <Global />
@@ -51,7 +54,7 @@ Get a list of Entra role assignments for the current user.
 m365 entra pim role assignment list --userId '@meID'
 ```
 
-Get a list of Entra role assignments since the first of January 2024
+Get a list of Entra role assignments since the first of January 2024.
 
 ```sh
 m365 entra pim role assignment list --startDateTime 2024-01-01T00:00:00Z
@@ -60,7 +63,7 @@ m365 entra pim role assignment list --startDateTime 2024-01-01T00:00:00Z
 Get a list of Entra role assignments with principal details.
 
 ```sh
-m365 entra pim role assignment list --includePrincipalDetails
+m365 entra pim role assignment list --withPrincipalDetails
 ```
 
 ## Response
@@ -136,9 +139,9 @@ m365 entra pim role assignment list --includePrincipalDetails
   </TabItem>
 </Tabs>
 
-### `includePrincipalDetails` response
+### `withPrincipalDetails` response
 
-When we make use of the option `includePrincipalDetails` the response will differ. 
+When we make use of the option `withPrincipalDetails` the response will differ. 
 
 <Tabs>
   <TabItem value="JSON">
@@ -202,7 +205,7 @@ When we make use of the option `includePrincipalDetails` the response will diffe
   <TabItem value="Markdown">
 
   ```md
-  # entra pim role assignment list --includePrincipalDetails "true"
+  # entra pim role assignment list --withPrincipalDetails "true"
 
   Date: 3/31/2024
 

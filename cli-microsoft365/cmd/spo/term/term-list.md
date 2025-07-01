@@ -32,6 +32,9 @@ m365 spo term list [options]
 : Name of the term set for which to retrieve terms. Specify `termSetId` or `termSetName` but not both.
 
 `--includeChildTerms`
+: (deprecated. Use option `withChildTerms` instead) If specified, child terms are loaded as well.
+
+`--withChildTerms`
 : If specified, child terms are loaded as well.
 ```
 
@@ -70,7 +73,7 @@ m365 spo term list --termGroupId 0e8f395e-ff58-4d45-9ff7-e331ab728beb --termSetI
 List taxonomy terms from the term group and term set with the given ID including child terms if any are found.
 
 ```sh
-m365 spo term list --termGroupId 0e8f395e-ff58-4d45-9ff7-e331ab728beb --termSetId 0e8f395e-ff58-4d45-9ff7-e331ab728bec --includeChildTerms
+m365 spo term list --termGroupId 0e8f395e-ff58-4d45-9ff7-e331ab728beb --termSetId 0e8f395e-ff58-4d45-9ff7-e331ab728bec --withChildTerms
 ```
 
 ## Response
@@ -163,9 +166,9 @@ m365 spo term list --termGroupId 0e8f395e-ff58-4d45-9ff7-e331ab728beb --termSetI
   </TabItem>
 </Tabs>
 
-### `includeChildTerms` response
+### `withChildTerms` response
 
-When we make use of the option `includeChildTerms` the response will differ. 
+When we make use of the option `withChildTerms` the response will differ. 
 
 <Tabs>
   <TabItem value="JSON">
@@ -246,7 +249,7 @@ When we make use of the option `includeChildTerms` the response will differ.
   <TabItem value="Markdown">
 
   ```md
-  # spo term list --termGroupName "PnPTermSets" --termSetName "PnP-Organizations" --includeChildTerms "true"
+  # spo term list --termGroupName "PnPTermSets" --termSetName "PnP-Organizations" --withChildTerms "true"
 
   Date: 5/8/2023
 

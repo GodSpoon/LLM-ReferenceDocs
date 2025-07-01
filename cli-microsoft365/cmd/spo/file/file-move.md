@@ -35,6 +35,9 @@ m365 spo file move [options]
 : Behavior when a file or folder with the same name is already present at the destination. Allowed values: `fail`, `replace`, `rename`. Defaults to `fail`.
 
 `--includeItemPermissions`
+: (deprecated. Use option `withItemPermissions` instead) Ensure that item-level permissions are preserved during the move.
+
+`--withItemPermissions`
 : Ensure that item-level permissions are preserved during the move.
 
 `--bypassSharedLock`
@@ -76,7 +79,7 @@ m365 spo file move --webUrl https://contoso.sharepoint.com/sites/project-x --sou
 Move a file referenced by its ID to another document library and retain item-level permissions.
 
 ```sh
-m365 spo file move --webUrl https://contoso.sharepoint.com/sites/project-x --sourceId b8cc341b-9c11-4f2d-aa2b-0ce9c18bcba2 --targetUrl "/sites/project-x/My Documents" --includeItemPermissions
+m365 spo file move --webUrl https://contoso.sharepoint.com/sites/project-x --sourceId b8cc341b-9c11-4f2d-aa2b-0ce9c18bcba2 --targetUrl "/sites/project-x/My Documents" --withItemPermissions
 ```
 
 ## Response

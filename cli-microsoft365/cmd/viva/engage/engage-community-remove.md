@@ -1,0 +1,62 @@
+-e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
+import Global from '/docs/cmd/_global.mdx';
+
+# viva engage community remove
+
+Removes a Viva Engage community
+
+## Usage
+
+```sh
+m365 viva engage community remove [options]
+```
+
+## Options
+
+```md definition-list
+`-i, --id [id]`
+: The id of the community. Specify either `id`, `displayName` or `entraGroupId`, but not multiple.
+
+`-n, --displayName [displayName]`
+: The name of the community. Specify either `id`, `displayName` or `entraGroupId`, but not multiple.
+
+`--entraGroupId [entraGroupId]`
+: The id of the Microsoft 365 group associated with the community. Specify either `id`, `displayName` or `entraGroupId`, but not multiple.
+
+`-f, --force`
+: Don't prompt for confirmation.
+```
+
+<Global />
+
+## Remarks
+
+:::info
+
+When the Viva Engage community is removed, all the associated Microsoft 365 content, including the M365 group, the document library, OneNote notebook, and Planner plan is deleted.
+
+:::
+
+## Examples
+
+Remove a community specified by id without prompting
+
+```sh
+m365 viva engage community remove --id EXAMPLE_SECRET_VALUE_PLACEHOLDER --force
+```
+
+Remove a community specified by name and prompt for confirmation
+
+```sh
+m365 viva engage community remove --displayName 'Software Engineers'
+```
+
+Remove a community specified by Entra group id and prompt for confirmation
+
+```sh
+m365 viva engage community remove --entraGroupId '0bed8b86-5026-4a93-ac7d-56750cc099f1'
+```
+
+## Response
+
+The command won't return a response on success

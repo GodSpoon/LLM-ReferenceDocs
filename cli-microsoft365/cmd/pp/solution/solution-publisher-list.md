@@ -17,10 +17,13 @@ m365 pp solution publisher list [options]
 
 ```md definition-list
 `-e, --environmentName <environmentName>`
-: The name of the environment
+: The name of the environment.
 
 `--includeMicrosoftPublishers`
-: Include the Microsoft Publishers
+: (deprecated. Use option `withMicrosoftPublishers` instead) Include the Microsoft Publishers.
+
+`--withMicrosoftPublishers`
+: Include the Microsoft Publishers.
 
 `--asAdmin`
 : Run the command as admin for environments you do not have explicitly assigned permissions to.
@@ -30,13 +33,13 @@ m365 pp solution publisher list [options]
 
 ## Examples
 
-List all publishers in a specific environment
+List all publishers in a specific environment.
 
 ```sh
 m365 pp solution publisher list --environmentName "EXAMPLE_SECRET_VALUE_PLACEHOLDER"
 ```
 
-List all publishers in a specific environment as Admin
+List all publishers in a specific environment as Admin.
 
 ```sh
 m365 pp solution publisher list --environmentName "EXAMPLE_SECRET_VALUE_PLACEHOLDER" --asAdmin

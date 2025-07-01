@@ -17,6 +17,9 @@ m365 spo hubsite list [options]
 
 ```md definition-list
 `-i, --includeAssociatedSites`
+: (deprecated. Use option `withAssociatedSites` instead) Include the associated sites in the result (only in JSON output).
+
+`--withAssociatedSites`
 : Include the associated sites in the result (only in JSON output).
 ```
 
@@ -37,7 +40,7 @@ m365 spo hubsite list
 List hub sites, including their associated sites, in the current tenant. Associated site info is only shown in JSON output.
 
 ```sh
-m365 spo hubsite list --includeAssociatedSites --output json
+m365 spo hubsite list --withAssociatedSites --output json
 ```
 
 ## Response
@@ -120,9 +123,9 @@ m365 spo hubsite list --includeAssociatedSites --output json
   </TabItem>
 </Tabs>
 
-### `includeAssociatedSites` response
+### `withAssociatedSites` response
 
-When we make use of the option `includeAssociatedSites` the response will differ. 
+When we make use of the option `withAssociatedSites` the response will differ. 
 
 <Tabs>
   <TabItem value="JSON">
@@ -177,7 +180,7 @@ When we make use of the option `includeAssociatedSites` the response will differ
   <TabItem value="Markdown">
 
   ```md
-  # spo hubsite list --includeAssociatedSites "true"
+  # spo hubsite list --withAssociatedSites "true"
 
   Date: 2/20/2023
 
