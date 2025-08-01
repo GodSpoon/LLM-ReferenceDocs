@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # planner plan remove
 
@@ -35,6 +37,25 @@ m365 planner plan remove [options]
 ## Remarks
 
 If you wish to delete a Planner plan contained within a Planner Roster, you'll have to remove the roster using [planner roster remove](../roster/roster-remove.mdx).
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                           |
+  |-----------------|---------------------------------------|
+  | Microsoft Graph | Tasks.ReadWrite, GroupMember.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                               |
+  |-----------------|-------------------------------------------|
+  | Microsoft Graph | Tasks.ReadWrite.All, GroupMember.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

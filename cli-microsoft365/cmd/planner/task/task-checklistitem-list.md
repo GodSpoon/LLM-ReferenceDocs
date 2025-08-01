@@ -22,6 +22,25 @@ m365 planner task checklistitem list [options]
 
 <Global />
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions |
+  |-----------------|-------------|
+  | Microsoft Graph | Tasks.Read  |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions    |
+  |-----------------|----------------|
+  | Microsoft Graph | Tasks.Read.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Lists the checklist items of a Planner task.

@@ -54,6 +54,25 @@ When using `rosterId`, the command is based on an API that is currently in previ
 
 :::
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                      |
+  |-----------------|----------------------------------|
+  | Microsoft Graph | Tasks.Read, GroupMember.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                          |
+  |-----------------|--------------------------------------|
+  | Microsoft Graph | Tasks.Read.All, GroupMember.Read.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 List tasks for the currently logged in user.

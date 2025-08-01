@@ -1,7 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 ```md definition-list
 `-h, --help [help]`
-: Output usage information. Optionally, specify which section of command's help you want to see. Allowed values are `options`, `examples`, `remarks`, `response`, `full`. Default is `options`.
+: Output usage information. Optionally, specify which section of command's help you want to see. Allowed values are `options`, `examples`, `remarks`, `permissions`, `response`, `full`. Default is `options`.
 
 `--query [query]`
 : JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.

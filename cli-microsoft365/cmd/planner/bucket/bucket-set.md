@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # planner bucket set
 
@@ -51,6 +53,25 @@ m365 planner bucket set [options]
 When using `rosterId`, the command is based on an API that is currently in preview and is subject to change once the API reached general availability.
 
 :::
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                           |
+  |-----------------|---------------------------------------|
+  | Microsoft Graph | Tasks.ReadWrite, GroupMember.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                               |
+  |-----------------|-------------------------------------------|
+  | Microsoft Graph | Tasks.ReadWrite.All, GroupMember.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

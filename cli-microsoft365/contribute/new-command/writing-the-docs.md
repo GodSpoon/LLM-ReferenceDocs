@@ -1,5 +1,5 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
-# Write the command specs
+# Writing docs page
 
 Each command has a corresponding documentation page. The contents of this page are almost identical to the help implemented in the command itself. This way, users working with the CLI can get help directly inside the CLI, while users interested in the capabilities of the CLI, can browse through the help pages published in our documentation. In the CLI for Microsoft 365, we extend this basic information with additional remarks and examples to help users work with the CLI. This will also be published in the terminal when users execute your command with the `--help` flag. 
 

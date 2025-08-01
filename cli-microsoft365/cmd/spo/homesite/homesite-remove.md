@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spo homesite remove
 
-Removes the current Home Site
+Removes a Home Site
 
 ## Usage
 
@@ -16,6 +16,9 @@ m365 spo homesite remove [options]
 ## Options
 
 ```md definition-list
+`-u, --url [url]`
+: URL of the home site to remove.
+
 `-f, --force`
 : Do not prompt for confirmation before removing the Home Site.
 ```
@@ -32,10 +35,10 @@ To use this command you must be either **SharePoint Administrator** or **Global 
 
 ## Examples
 
-Removes the current Home Site without confirmation.
+Removes a Home site specified by URL without prompting for confirmation.
 
 ```sh
-m365 spo homesite remove --force
+m365 spo homesite remove --url "https://contoso.sharepoint.com/sites/testcomms" --force
 ```
 
 ## Response

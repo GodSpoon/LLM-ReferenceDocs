@@ -22,6 +22,25 @@ m365 planner task reference list [options]
 
 <Global />
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions |
+  |-----------------|-------------|
+  | Microsoft Graph | Tasks.Read  |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions    |
+  |-----------------|----------------|
+  | Microsoft Graph | Tasks.Read.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Retrieve the references of the specified planner task
