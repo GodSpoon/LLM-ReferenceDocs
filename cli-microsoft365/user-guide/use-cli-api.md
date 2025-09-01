@@ -1,7 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 ---
 title: Use CLI programmatically
-sidebar_position: 15
+sidebar_position: 16
 ---
 
 # Use CLI for Microsoft 365 programmatically

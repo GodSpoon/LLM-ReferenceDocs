@@ -1,7 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 ---
 title: Use CLI for Microsoft 365 VS Code extension
-sidebar_position: 13
+sidebar_position: 14
 ---
 
 # Use CLI for Microsoft 365 VS Code extension

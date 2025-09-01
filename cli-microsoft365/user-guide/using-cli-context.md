@@ -1,7 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 ---
 title: Use CLI for Microsoft 365 context
-sidebar_position: 16
+sidebar_position: 17
 ---
 
 # Use CLI for Microsoft 365 context

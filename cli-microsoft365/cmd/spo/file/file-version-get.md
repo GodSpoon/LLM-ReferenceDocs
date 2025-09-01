@@ -54,6 +54,7 @@ m365 spo file version get --webUrl https://contoso.sharepoint.com --label "1.0" 
   {
     "CheckInComment": "",
     "Created": "2022-10-30T12:03:06Z",
+    "ExpirationDate": "2026-01-31T08:23:43.0000000Z",
     "ID": 512,
     "IsCurrentVersion": false,
     "Length": "18898",
@@ -69,6 +70,7 @@ m365 spo file version get --webUrl https://contoso.sharepoint.com --label "1.0" 
   ```text
   CheckInComment  :
   Created         : 2022-10-30T12:03:06Z
+  ExpirationDate  : 2026-01-31T08:23:43.0000000Z
   ID              : 512
   IsCurrentVersion: false
   Length          : 18898
@@ -81,8 +83,8 @@ m365 spo file version get --webUrl https://contoso.sharepoint.com --label "1.0" 
   <TabItem value="CSV">
 
   ```csv
-  CheckInComment,Created,ID,IsCurrentVersion,Length,Size,Url,VersionLabel
-  ,2022-10-30T12:03:06Z,512,,18898,18898,_vti_history/512/Shared Documents/Document.docx,1.0
+  CheckInComment,Created,ExpirationDate,ID,IsCurrentVersion,Length,Size,Url,VersionLabel
+  ,2022-10-30T12:03:06Z,2026-01-31T08:23:43.0000000Z,512,0,18898,18898,_vti_history/512/Shared Documents/Document.docx,1.0
   ```
 
   </TabItem>
@@ -99,6 +101,7 @@ m365 spo file version get --webUrl https://contoso.sharepoint.com --label "1.0" 
   ---------|-------
   CheckInComment |
   Created | 2022-10-30T12:03:06Z
+  ExpirationDate | 2026-01-31T08:23:43.0000000Z
   ID | 512
   IsCurrentVersion | false
   Length | 18898

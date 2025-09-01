@@ -1,7 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 ---
 title: Manage Microsoft 365 apps with the CLI 
-sidebar_position: 14
+sidebar_position: 15
 ---
 
 # Manage Microsoft 365 apps with the CLI for Microsoft 365

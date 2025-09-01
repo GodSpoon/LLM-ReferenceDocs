@@ -1,7 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 ---
 title: Use proxy url
-sidebar_position: 17
+sidebar_position: 18
 ---
 
 # Configure CLI for Microsoft 365 to use a proxy

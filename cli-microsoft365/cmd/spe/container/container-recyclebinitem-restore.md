@@ -1,0 +1,54 @@
+-e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
+import Global from '/docs/cmd/_global.mdx';
+
+# spe container recyclebinitem restore
+
+Restores a deleted container
+
+## Usage
+
+```sh
+m365 spe container recyclebinitem restore [options]
+```
+
+## Options
+
+```md definition-list
+`--id [id]`
+: The container id. Specify either `id` or `name` but not both.
+
+`--name [name]`
+: The display name of the Container. Specify either `id` or `name` but not both.
+
+`--containerTypeId [containerTypeId]`
+: The container type ID of the container instance. Use either `containerTypeId` or `containerTypeName` but not both.
+
+`--containerTypeName [containerTypeName]`
+: The container type name of the container instance. Use either `containerTypeId` or `containerTypeName` but not both.
+```
+
+<Global />
+
+## Examples
+
+Restore a deleted container by ID.
+
+```sh
+m365 spe container recyclebinitem restore --id "b!EXAMPLE_SECRET_VALUE_PLACEHOLDER"
+```
+
+Restore a deleted container by using its name and container type ID.
+
+```sh
+m365 spe container recyclebinitem restore --containerTypeId "91710488-5756-407f-9046-fbe5f0b4de73" --name "Invoices"
+```
+
+Restore a deleted container by using its name and container type name.
+
+```sh
+m365 spe container recyclebinitem restore --containerTypeName "My container type name" --name "Invoices"
+```
+
+## Response
+
+The command won't return a response on success.
