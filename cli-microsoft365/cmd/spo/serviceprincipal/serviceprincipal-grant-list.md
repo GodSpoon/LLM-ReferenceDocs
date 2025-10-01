@@ -47,12 +47,12 @@ m365 spo serviceprincipal grant list
   ```json
   [
     {
-      "IsDomainIsolated": false,
-      "ObjectId": "EXAMPLE_SECRET_VALUE_PLACEHOLDER",
-      "PackageName": null,
-      "Resource": "Windows Azure Active Directory",
-      "ResourceId": "b0c1505e-d1fa-4215-a3ac-5e3141b8d3b1",
-      "Scope": "User.Read"
+      "clientId": "1e551032-3e2d-4d6b-9392-9b25451313a0",
+      "consentType": "AllPrincipals",
+      "id": "EXAMPLE_SECRET_VALUE_PLACEHOLDER",
+      "principalId": null,
+      "resourceId": "cd143b5c-7693-42ec-89fb-377e8e97a8ff",
+      "scope": "User.Read"
     }
   ]
   ```
@@ -61,17 +61,17 @@ m365 spo serviceprincipal grant list
   <TabItem value="Text">
 
   ```text
-  IsDomainIsolated  ObjectId                                     PackageName  Resource                        ResourceId                            Scope
-  ----------------  -------------------------------------------  -----------  ------------------------------  ------------------------------------  --------------------------
-  false             EXAMPLE_SECRET_VALUE_PLACEHOLDER  null         Windows Azure Active Directory  b0c1505e-d1fa-4215-a3ac-5e3141b8d3b1  User.Read
+  clientId                              consentType    id                                           principalId  resourceId                            scope                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  ------------------------------------  -------------  -------------------------------------------  -----------  ------------------------------------  ----------
+  1e551032-3e2d-4d6b-9392-9b25451313a0  AllPrincipals  EXAMPLE_SECRET_VALUE_PLACEHOLDER  null         cd143b5c-7693-42ec-89fb-377e8e97a8ff  User.Read
   ```
 
   </TabItem>
   <TabItem value="CSV">
 
   ```csv
-  IsDomainIsolated,ObjectId,PackageName,Resource,ResourceId,Scope
-  ,EXAMPLE_SECRET_VALUE_PLACEHOLDER,,Windows Azure Active Directory,b0c1505e-d1fa-4215-a3ac-5e3141b8d3b1,User.Read
+  clientId,consentType,id,principalId,resourceId,scope
+  1e551032-3e2d-4d6b-9392-9b25451313a0,AllPrincipals,EXAMPLE_SECRET_VALUE_PLACEHOLDER,,cd143b5c-7693-42ec-89fb-377e8e97a8ff,User.Read
   ```
 
   </TabItem>
@@ -80,17 +80,17 @@ m365 spo serviceprincipal grant list
   ```md
   # spo serviceprincipal grant list 
 
-  Date: 5/7/2023
+  Date: 7/8/2025
 
   ## EXAMPLE_SECRET_VALUE_PLACEHOLDER
 
   Property | Value
   ---------|-------
-  IsDomainIsolated | false
-  ObjectId | 4WtBzD8u5kW-sYuikIWL\_8ZYTP5mJB1LnC6OT4Ibr94
-  Resource | Microsoft Graph
-  ResourceId | fe4c58c6-2466-4b1d-9c2e-8e4f821bafde
-  Scope | Mail.Read
+  clientId | 1e551032-3e2d-4d6b-9392-9b25451313a0
+  consentType | AllPrincipals
+  id | EXAMPLE_SECRET_VALUE_PLACEHOLDER
+  resourceId | cd143b5c-7693-42ec-89fb-377e8e97a8ff
+  scope | User.Read
   ```
 
   </TabItem>

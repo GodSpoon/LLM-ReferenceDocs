@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spe container recyclebinitem restore
 
@@ -28,6 +30,35 @@ m365 spe container recyclebinitem restore [options]
 ```
 
 <Global />
+
+## Remarks
+
+:::warning
+
+The command is based on an API that is currently in preview and is subject to change once the API reached general availability.
+
+:::
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                                                        |
+  |-----------------|--------------------------------------------------------------------|
+  | Microsoft Graph | FileStorageContainer.Selected, FileStorageContainerType.Manage.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  This command only supports application permissions when using the `containerTypeId` option.
+
+  | Resource        | Permissions                   |
+  |-----------------|-------------------------------|
+  | Microsoft Graph | FileStorageContainer.Selected |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

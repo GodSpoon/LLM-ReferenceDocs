@@ -17,7 +17,10 @@ m365 flow environment get [options]
 
 ```md definition-list
 `-n, --name [name]`
-: The name of the environment to get information about. When not specified, the default environment is retrieved.
+: The name of the environment to get information about. When not specified, the default environment is retrieved. Specify either `name` or `default`, but not both.
+
+`--default`
+: Indicates that the default environment should be retrieved. Specify either `name` or `default`, but not both.
 ```
 
 <Global />
@@ -43,12 +46,10 @@ m365 flow environment get --name EXAMPLE_SECRET_VALUE_PLACEHOLDER
 Get information about the default Microsoft Flow environment.
 
 ```sh
-m365 flow environment get
+m365 flow environment get --default
 ```
 
 ## Response
-
-### Standard response
 
 <Tabs>
   <TabItem value="JSON">
@@ -154,7 +155,7 @@ m365 flow environment get
   <TabItem value="Markdown">
 
   ```md
-  # flow environment get
+  # flow environment get --default
 
   Date: 8/2/2023
 

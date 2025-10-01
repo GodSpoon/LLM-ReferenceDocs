@@ -17,7 +17,10 @@ m365 pp environment get [options]
 
 ```md definition-list
 `-n, --name [name]`
-: The name of the environment. When not specified, the default environment is retrieved.
+: The name of the environment. When not specified, the default environment is retrieved. Specify either `name` or `default`, but not both.
+
+`--default`
+: Indicates that the default environment should be retrieved. Specify either `name` or `default`, but not both.
 
 `--asAdmin`
 : Run the command as admin and retrieve details of environments you do not have explicitly assigned permissions to.
@@ -54,7 +57,7 @@ m365 pp environment get --name EXAMPLE_SECRET_VALUE_PLACEHOLDER --asAdmin
 Get information about the default Power Platform environment.
 
 ```sh
-m365 pp environment get
+m365 pp environment get --default
 ```
 
 ## Response

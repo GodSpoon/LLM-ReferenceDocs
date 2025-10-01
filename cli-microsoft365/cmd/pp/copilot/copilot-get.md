@@ -13,12 +13,6 @@ Get information about the specified copilot
 m365 pp copilot get [options]
 ```
 
-## Alias
-
-```sh
-m365 pp chatbot get [options]
-```
-
 ## Options
 
 ```md definition-list

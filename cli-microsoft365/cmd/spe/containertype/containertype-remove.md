@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spe containertype remove
 
@@ -28,21 +30,46 @@ m365 spe containertype remove [options]
 
 ## Remarks
 
-:::info
+:::danger[Important]
 
-To use this command you must be either **SharePoint Administrator** or **Global Administrator**.
+This command relies on a different API endpoint due to current API limitations. As a result, it requires different permissions than other `spe containertype` commands. We plan to align the permissions in the future once these limitations are resolved.
 
 :::
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions        |
+  |------------|--------------------|
+  | SharePoint | Container.Selected |
+
+  :::info
+
+  To use this command you must be either **SharePoint Administrator** or **Global Administrator**.
+
+  :::
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions        |
+  |------------|--------------------|
+  | SharePoint | Container.Selected |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
-Removes a container type by ID
+Removes a container type by ID.
 
 ```sh
 m365 spe containertype remove --id 4ec4aefd-4fa3-0e4a-20c3-6e68389e7138
 ```
 
-Removes a container type by name
+Removes a container type by name.
 
 ```sh
 m365 spe containertype remove --name 'My container type'
