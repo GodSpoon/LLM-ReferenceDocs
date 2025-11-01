@@ -32,6 +32,24 @@ m365 entra appregistration list [options]
 
 Using the `--properties` option, you can specify a comma-separated list of app properties to retrieve from the Microsoft Graph. If you don't specify any properties, the command will output the default properties returned by Graph.
 
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions          |
+  |-----------------|----------------------|
+  | Microsoft Graph | Application.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions          |
+  |-----------------|----------------------|
+  | Microsoft Graph | Application.Read.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Retrieve a list of Entra app registrations.

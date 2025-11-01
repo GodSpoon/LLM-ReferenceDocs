@@ -27,6 +27,24 @@ m365 graph schemaextension get [options]
 To get properties of a schema extension definition, you have to pass the ID of the schema
 extension.
 
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions |
+  |-----------------|-------------|
+  | Microsoft Graph | User.Read   |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions          |
+  |-----------------|----------------------|
+  | Microsoft Graph | Application.Read.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Gets properties of a schema extension definition with ID domain_myExtension

@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra administrativeunit remove
 
@@ -33,6 +35,25 @@ m365 entra administrativeunit remove [options]
 To use this command you must be either **Global Administrator** or **Privileged Role Administrator**.
 
 :::
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                      |
+  |-----------------|----------------------------------|
+  | Microsoft Graph | AdministrativeUnit.ReadWrite.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                      |
+  |-----------------|----------------------------------|
+  | Microsoft Graph | AdministrativeUnit.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

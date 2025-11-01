@@ -40,6 +40,24 @@ m365 entra pim role request list [options]
 
 <Global />
 
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                                |
+  |-----------------|--------------------------------------------|
+  | Microsoft Graph | EXAMPLE_SECRET_VALUE_PLACEHOLDER |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                                |
+  |-----------------|--------------------------------------------|
+  | Microsoft Graph | EXAMPLE_SECRET_VALUE_PLACEHOLDER |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Get a list of PIM requests for roles.

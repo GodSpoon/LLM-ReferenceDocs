@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # purview retentioneventtype set
 
@@ -31,9 +33,27 @@ This command is based on a Microsoft Graph API that is currently in preview and 
 
 :::
 
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                     |
+  |-----------------|---------------------------------|
+  | Microsoft Graph | RecordsManagement.ReadWrite.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                     |
+  |-----------------|---------------------------------|
+  | Microsoft Graph | RecordsManagement.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
-Update the description of a retention event type
+Update the description of a retention event type.
 
 ```sh
 m365 purview retentioneventtype set --id c37d695e-d581-4ae9-82a0-9364eba4291e --description 'some extra information'

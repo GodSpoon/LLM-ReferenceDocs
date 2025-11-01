@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # purview retentionlabel remove
 
@@ -31,9 +33,20 @@ This command is based on a Microsoft Graph API that is currently in preview and 
 
 :::
 
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                     |
+  |-----------------|---------------------------------|
+  | Microsoft Graph | RecordsManagement.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
-Delete a retention label
+Delete a retention label.
 
 ```sh
 m365 purview retentionlabel remove --id 'e554d69c-0992-4f9b-8a66-fca3c4d9c531'

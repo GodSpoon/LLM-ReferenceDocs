@@ -45,6 +45,20 @@ Returns a list of all enterprise applications that comply with the specified dis
 m365 entra enterpriseapp list --displayName "My custom enterprise application" --tag "EXAMPLE_SECRET_VALUE_PLACEHOLDER"
 ```
 
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+  | Resource        | Permissions          |
+  |-----------------|----------------------|
+  | Microsoft Graph | Application.Read.All |
+  </TabItem>
+  <TabItem value="Application">
+  | Resource        | Permissions          |
+  |-----------------|----------------------|
+  | Microsoft Graph | Application.Read.All |
+  </TabItem>
+</Tabs>
+
 ## Response
 
 <Tabs>

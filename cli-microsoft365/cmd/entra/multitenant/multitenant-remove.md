@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra multitenant remove
 
@@ -35,6 +37,24 @@ When removing a Multi-Tenant Organization, all associations with other tenants w
 The removing process can take up to 2 hours to complete.
 
 :::
+
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                           |
+  |-----------------|---------------------------------------|
+  | Microsoft Graph | MultiTenantOrganization.ReadWrite.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                           |
+  |-----------------|---------------------------------------|
+  | Microsoft Graph | MultiTenantOrganization.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

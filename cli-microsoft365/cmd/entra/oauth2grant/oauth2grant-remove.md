@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra oauth2grant remove
 
@@ -32,6 +34,24 @@ If the `objectId` listed when using the [entra oauth2grant list](./oauth2grant-l
 ```sh
 m365 entra oauth2grant remove --grantId \-EXAMPLE_SECRET_VALUE_PLACEHOLDER
 ```
+
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                            |
+  |-----------------|----------------------------------------|
+  | Microsoft Graph | DelegatedPermissionGrant.ReadWrite.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                            |
+  |-----------------|----------------------------------------|
+  | Microsoft Graph | DelegatedPermissionGrant.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

@@ -56,6 +56,24 @@ When using the `--properties` option it's possible to enter a JSON string. In Po
 
 :::
 
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions               |
+  |-----------------|---------------------------|
+  | Microsoft Graph | Application.ReadWrite.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                                        |
+  |-----------------|----------------------------------------------------|
+  | Microsoft Graph | Application.ReadWrite.All, Directory.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Create a schema extension

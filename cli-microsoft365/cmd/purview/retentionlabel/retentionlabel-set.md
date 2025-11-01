@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # purview retentionlabel set
 
@@ -51,6 +53,17 @@ m365 purview retentionlabel set [options]
 This command is based on a Microsoft Graph API that is currently in preview and is subject to change once the API reached general availability.
 
 :::
+
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                     |
+  |-----------------|---------------------------------|
+  | Microsoft Graph | RecordsManagement.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra group member remove
 
@@ -53,6 +55,24 @@ This feature proves useful when you need to remove a user from a group, but you 
 Without using this option, you would need to manually verify the user's role in the group before proceeding with removal.
 
 :::
+
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions               |
+  |-----------------|---------------------------|
+  | Microsoft Graph | GroupMember.ReadWrite.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions               |
+  |-----------------|---------------------------|
+  | Microsoft Graph | GroupMember.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

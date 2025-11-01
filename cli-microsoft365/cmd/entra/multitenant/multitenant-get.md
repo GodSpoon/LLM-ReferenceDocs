@@ -1,5 +1,4 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
-
 import Global from '/docs/cmd/_global.mdx';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -25,6 +24,24 @@ m365 entra multitenant get [options]
 To use this command you must be at least **Security Administrator**.
 
 :::
+
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                           |
+  |-----------------|---------------------------------------|
+  | Microsoft Graph | MultiTenantOrganization.ReadBasic.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                      |
+  |-----------------|----------------------------------|
+  | Microsoft Graph | MultiTenantOrganization.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

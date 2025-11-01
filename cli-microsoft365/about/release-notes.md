@@ -5,6 +5,62 @@ sidebar_position: 4
 
 # Release notes
 
+## [v11.1.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.1.0)
+
+### New commands
+
+**SharePoint:**
+
+- [spo web alert list](../cmd/spo/web/web-alert-list.mdx) - lists all SharePoint list alerts [#6861](https://github.com/pnp/cli-microsoft365/issues/6861)
+- [spo web alert remove](../cmd/spo/web/web-alert-remove.mdx) - removes an alert from a SharePoint list [#6863](https://github.com/pnp/cli-microsoft365/issues/6863)
+
+### Changes
+
+- migrated [flow environment list](../cmd/flow/environment/environment-list.mdx) to Zod [#6901](https://github.com/pnp/cli-microsoft365/issues/6901)
+- migrated [pp environment list](../cmd/pp/environment/environment-list.mdx) to Zod [#6903](https://github.com/pnp/cli-microsoft365/issues/6903)
+- migrated [status](../cmd/status.mdx) to Zod [#6912](https://github.com/pnp/cli-microsoft365/issues/6912)
+- migrated [booking business list](../cmd/booking/business/business-list.mdx) to Zod [#6891](https://github.com/pnp/cli-microsoft365/issues/6891)
+- migrated [pa environment list](../cmd/pa/environment/environment-list.mdx) to Zod [#6902](https://github.com/pnp/cli-microsoft365/issues/6902)
+- migrated [connection list](../cmd/connection/connection-list.mdx) to Zod [#6911](https://github.com/pnp/cli-microsoft365/issues/6902)
+- migrated [purview retentionlabel list](../cmd/purview/retentionlabel/retentionlabel-list.mdx) to Zod [#6896](https://github.com/pnp/cli-microsoft365/issues/6896)
+- migrated [purview retentionevent list](../cmd/purview/retentionevent/retentionevent-list.mdx) to Zod [#6898](https://github.com/pnp/cli-microsoft365/issues/6898)
+- migrated [purview retentioneventtype list](../cmd/purview/retentioneventtype/retentioneventtype-list.mdx) to Zod [#6897](https://github.com/pnp/cli-microsoft365/issues/6897)
+- migrated [outlook roomlist list](../cmd/outlook/roomlist/roomlist-list.mdx) to Zod [#6899](https://github.com/pnp/cli-microsoft365/issues/6899)
+- migrated [onedrive list](../cmd/onedrive/onedrive-list.mdx) to Zod [#6900](https://github.com/pnp/cli-microsoft365/issues/6900)
+- migrated [planner tenant settings list](../cmd/planner/tenant/tenant-settings-list.mdx) to Zod [#6895](https://github.com/pnp/cli-microsoft365/issues/6895)
+- updated eslint dependencies in the codebase [#6350](https://github.com/pnp/cli-microsoft365/issues/6350)
+- updated 'package watch' script to support new commands [#5835](https://github.com/pnp/cli-microsoft365/issues/5835)
+- updated site preview image
+- added minimal permissions for 'booking business' commands [#7021](https://github.com/pnp/cli-microsoft365/issues/7021)
+- added minimal permissions for 'entra approleassignment' commands [#6926](https://github.com/pnp/cli-microsoft365/issues/6926)
+- added minimal permissions for 'entra enterpriseapp' commands [#6927](https://github.com/pnp/cli-microsoft365/issues/6927)
+- added minimal permissions for 'entra group' commands [#6935](https://github.com/pnp/cli-microsoft365/issues/6935)
+- added minimal permissions for 'entra group member' commands [#6936](https://github.com/pnp/cli-microsoft365/issues/6936)
+- added minimal permissions for 'entra groupsetting' commands [#6937](https://github.com/pnp/cli-microsoft365/issues/6937)
+- added minimal permissions for 'entra m365group' commands [#6944](https://github.com/pnp/cli-microsoft365/issues/6944)
+- added minimal permissions for 'entra m365group report' commands [#6943](https://github.com/pnp/cli-microsoft365/issues/6943)
+- added minimal permissions for 'entra multitenant' commands [#6945](https://github.com/pnp/cli-microsoft365/issues/6945)
+- added minimal permissions for 'entra oauth2grant' commands [#6946](https://github.com/pnp/cli-microsoft365/issues/6946)
+- added minimal permissions for 'entra organization' commands [#6947](https://github.com/pnp/cli-microsoft365/issues/6947)
+- added minimal permissions for 'entra pim role' commands [#6948](https://github.com/pnp/cli-microsoft365/issues/6948)
+- added minimal permissions for 'graph directoryextension' commands [#6979](https://github.com/pnp/cli-microsoft365/issues/6979)
+- added minimal permissions for 'graph schemaextension' and 'graph subscription' commands [#6981](https://github.com/pnp/cli-microsoft365/issues/6981)
+- added minimal permissions for 'purview retentionevent' commands [#6985](https://github.com/pnp/cli-microsoft365/issues/6985)
+- added minimal permissions for 'purview retentioneventtype' commands [#6986](https://github.com/pnp/cli-microsoft365/issues/6986)
+- added minimal permissions for 'purview retentionlabel' commands [#6987](https://github.com/pnp/cli-microsoft365/issues/6987)
+- added minimal permissions for 'purview sensitivitylabel' commands [#6988](https://github.com/pnp/cli-microsoft365/issues/6988)
+- added minimal permissions for 'purview threatassessment' commands [#6989](https://github.com/pnp/cli-microsoft365/issues/6989)
+- updated 'spfx project upgrade' to support 'spfx-fast-serve-helpers' for all versions [#6802](https://github.com/pnp/cli-microsoft365/issues/6802)
+- added minimal permissions for 'entra administrativeunit member' commands [#6922](https://github.com/pnp/cli-microsoft365/issues/6922)
+- added minimal permissions for 'entra administrativeunit' commands [#6921](https://github.com/pnp/cli-microsoft365/issues/6921)
+- migrated [entra license list](../cmd/entra/license/license-list.mdx) to Zod [#6905](https://github.com/pnp/cli-microsoft365/issues/6905)
+- added minimal permissions for 'entra m365group recyclebinitem' commands [#6941](https://github.com/pnp/cli-microsoft365/issues/6941)
+- added minimal permissions for 'entra app' commands [#6923](https://github.com/pnp/cli-microsoft365/issues/6923)
+- added minimal permissions for 'outlook mail', 'outlook mailbox', 'outlook room' commands [#6983](https://github.com/pnp/cli-microsoft365/issues/6983)
+- migrated [pp gateway list](../cmd/pp/gateway/gateway-list.mdx) to Zod [#6893](https://github.com/pnp/cli-microsoft365/issues/6893)
+- migrated [pp tenant settings list](../cmd/pp/tenant/tenant-settings-list.mdx) to Zod [#6894](https://github.com/pnp/cli-microsoft365/issues/6894)
+- migrated [logout](../cmd/logout.mdx) to Zod [#6914](https://github.com/pnp/cli-microsoft365/issues/6914)
+
 ## [v11.0.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.0.0)
 
 ### New commands
@@ -235,7 +291,7 @@ sidebar_position: 4
 
 **SharePoint:**
 
-- [spo homesite add](../cmd/spo/homesite/homesite-add.mdx) - Adds a home site [#6488](https://github.com/pnp/cli-microsoft365/issues/6488)
+- [spo homesite add](../cmd/spo/homesite/homesite-add.mdx) - adds a home site [#6488](https://github.com/pnp/cli-microsoft365/issues/6488)
 - [spo page section remove](../cmd/spo/page/page-section-remove.mdx) - removes a section from a modern page [#6541](https://github.com/pnp/cli-microsoft365/issues/6541)
 
 **Viva:**

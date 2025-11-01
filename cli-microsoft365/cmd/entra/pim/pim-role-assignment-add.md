@@ -72,6 +72,24 @@ When activating a role for other users, you must be **Privileged Role Administra
 
 :::
 
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                                |
+  |-----------------|--------------------------------------------|
+  | Microsoft Graph | EXAMPLE_SECRET_VALUE_PLACEHOLDER |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                                |
+  |-----------------|--------------------------------------------|
+  | Microsoft Graph | EXAMPLE_SECRET_VALUE_PLACEHOLDER |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Request activation of the SharePoint Administrator Entra role assignment for the current user.

@@ -34,6 +34,18 @@ m365 purview threatassessment add [options]
 
 <Global />
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                    |
+  |-----------------|--------------------------------|
+  | Microsoft Graph | ThreatAssessment.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
+
 ## Remarks
 
 :::info

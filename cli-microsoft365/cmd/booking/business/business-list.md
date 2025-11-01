@@ -17,6 +17,24 @@ m365 booking business list [options]
 
 <Global />
 
+## Permissions
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions       |
+  |-----------------|-------------------|
+  | Microsoft Graph | Bookings.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                       |
+  |-----------------|-----------------------------------|
+  | Microsoft Graph | BookingsAppointment.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Returns a list of all Microsoft Bookings businesses that are created for the tenant.
