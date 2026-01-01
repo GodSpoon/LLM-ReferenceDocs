@@ -47,11 +47,21 @@ class SpoGroupGetCommand extends SpoCommand {
 export default new SpoGroupGetCommand();
 ```
 
+Each command in the CLI for Microsoft 365 follows a consistent class naming convention to ensure clarity and maintainability. The command class name is based on the command's name and follows PascalCase. It is composed of the command's hierarchy segments joined together, followed by the suffix Command. For example, for the command `spo group get`, the class name would be `SpoGroupGetCommand`.
+
+:::warning
+
+To prevent an uncontrolled expansion of command names, we maintain a dictionary of approved command words that can be used when defining a command. This dictionary is located in the [`eslint.config.mjs`](https://github.com/pnp/cli-microsoft365/blob/main/eslint.config.mjs) file.
+
+If a desired command name includes a word that isn't in the approved list, that word should be added to the dictionary to allow the automated workflow to pass successfully.
+
+:::
+
 Depending on your command and the service for which you're building the command, there might be a base class that you can use to simplify the implementation. For example, for SPO, you can inherit from the [SpoCommand](https://github.com/pnp/cli-microsoft365/blob/main/src/m365/base/SpoCommand.ts) base class. This class contains several helper methods to simplify your implementation.
 
 ### Include command name
 
-When you create the minimum file, you'll get an error about a nonexistent type within `commands`. This is correct because we haven't defined the name of the command yet. Let's add this to the `commands` export located in `src/m365/spo/commands.ts`:
+When you create the minimum file, you'll get an error about a nonexistent type within `commands`. This is correct because we haven't defined the name of the command yet. Let's add this to the `commands` export located in `src/m365/spo/commands.ts`.
 
 ```ts title="src/m365/spo/commands.ts"
 const prefix: string = 'spo';
@@ -63,6 +73,31 @@ export default {
 };
 ```
 
+:::note
+
+When defining commands, you should group them by their base command and sort the groups alphabetically. Commands within the same group should also be listed alphabetically. Check the example below.
+
+<details>
+  <summary>Example of command sorting</summary>
+
+  ```ts title="src/m365/spo/commands.ts"
+  const prefix: string = 'spo';
+
+  export default {
+    GROUP_ADD: `${prefix} group add`,
+    GROUP_GET: `${prefix} group get`,
+    GROUP_LIST: `${prefix} group list`,
+    GROUP_REMOVE: `${prefix} group remove`,
+    GROUP_SET: `${prefix} group set`,
+    GROUP_MEMBER_ADD: `${prefix} group member add`,
+    GROUP_MEMBER_LIST: `${prefix} group member list`,
+    GROUP_MEMBER_REMOVE: `${prefix} group member remove`,
+  };
+  ```
+</details>
+
+:::
+
 Next, to enhance our command with options, validators, telemetry, there are a bunch of methods already available for you. When you make use of a method we order them alphabetically.
 
 ## Defining command options
@@ -72,16 +107,16 @@ Some commands require options. For example, when you want to get a group, you ne
 Global CLI options, such as `query`, `output`, `debug` or `verbose` are defined in the `globalOptionsZod` property. To define options specific to your command, extend the global schema with your command-specific options.
 
 ```ts title="src/m365/spo/commands/group/group-get.ts"
+import { z } from 'zod';
 import { globalOptionsZod } from '../../Command.js';
 
-export const options = globalOptionsZod
-  .extend({
-    webUrl: z.string(),
-    id: z.number().optional(),
-    name: z.string().optional(),
-    associatedGroup: z.string().optional()
-  })
-  .strict();
+export const options = z.strictObject({
+  ...globalOptionsZod.shape,
+  webUrl: z.string(),
+  id: z.number().optional(),
+  name: z.string().optional(),
+  associatedGroup: z.string().optional()
+});
 ```
 
 In this example, we're adding 4 command options: `webUrl`, `id`, `name`, and `associatedGroup`. The `webUrl` option is required and must be a string. The `id`, `name`, and `associatedGroup` options are optional. Since our command doesn't support unknown options, we set the schema to strict.
@@ -89,16 +124,16 @@ In this example, we're adding 4 command options: `webUrl`, `id`, `name`, and `as
 Next, we define a TypeScript type for options and command args, which allows us to benefit from type-safety when working with options in the command logic.
 
 ```ts title="src/m365/spo/commands/group/group-get.ts"
+import { z } from 'zod';
 import { globalOptionsZod } from '../../Command.js';
 
-export const options = globalOptionsZod
-  .extend({
-    webUrl: z.string(),
-    id: z.number().optional(),
-    name: z.string().optional(),
-    associatedGroup: z.string().optional()
-  })
-  .strict();
+export const options = z.strictObject({
+  ...globalOptionsZod.shape,
+  webUrl: z.string(),
+  id: z.number().optional(),
+  name: z.string().optional(),
+  associatedGroup: z.string().optional()
+});
 declare type Options = z.infer<typeof options>;
 
 interface CommandArgs {
@@ -109,16 +144,16 @@ interface CommandArgs {
 Finally, we expose the options schema in the command class.
 
 ```ts title="src/m365/spo/commands/group/group-get.ts"
+import { z } from 'zod';
 import { globalOptionsZod } from '../../Command.js';
 
-export const options = globalOptionsZod
-  .extend({
-    webUrl: z.string(),
-    id: z.number().optional(),
-    name: z.string().optional(),
-    associatedGroup: z.string().optional()
-  })
-  .strict();
+export const options = z.strictObject({
+  ...globalOptionsZod.shape,
+  webUrl: z.string(),
+  id: z.number().optional(),
+  name: z.string().optional(),
+  associatedGroup: z.string().optional()
+});
 declare type Options = z.infer<typeof options>;
 
 interface CommandArgs {
@@ -128,7 +163,7 @@ interface CommandArgs {
 class SpoGroupGetCommand extends SpoCommand {
   // ...
 
-  public get schema(): z.ZodTypeAny | undefined {
+  public get schema(): z.ZodType | undefined {
     return options;
   }
 
@@ -147,17 +182,16 @@ class SpoGroupGetCommand extends SpoCommand {
 To simplify using the CLI, we often use aliases for options. For example, the `--webUrl` option can be shortened to `-u`. To define an alias for an option, we wrap the property in the `alias` function in the schema.
 
 ```ts title="src/m365/spo/commands/group/group-get.ts"
+import { z } from 'zod';
 import { globalOptionsZod } from '../../Command.js';
-import { zod } from '../../utils/zod.js';
 
-export const options = globalOptionsZod
-  .extend({
-    webUrl: zod.alias('u', z.string()),
-    id: zod.alias('i', z.number().optional()),
-    name: z.string().optional(),
-    associatedGroup: z.string().optional()
-  })
-  .strict();
+export const options = z.strictObject({
+  ...globalOptionsZod.shape,
+  webUrl: z.string().alias('u'),
+  id: z.number().optional().alias('i'),
+  name: z.string().optional(),
+  associatedGroup: z.string().optional()
+});
 ```
 
 ## Defining option autocomplete
@@ -165,6 +199,7 @@ export const options = globalOptionsZod
 Some options require predefined values. For example, the `associatedGroup` option can only have one of the following values: `Owner`, `Member`, or `Visitor`. To define the allowed values for an option, we use enums with the `coercedEnum` helper function. This function allows users to specify the values in a case-insensitive way. In the code, the value of the `associatedGroup` option will be expressed as an enum which allows us to benefit from type-safety and support refactoring.
 
 ```ts title="src/m365/spo/commands/group/group-get.ts"
+import { z } from 'zod';
 import { globalOptionsZod } from '../../Command.js';
 import { zod } from '../../utils/zod.js';
 
@@ -174,14 +209,13 @@ enum AssociatedGroup {
   Visitor = 'visitor'
 };
 
-export const options = globalOptionsZod
-  .extend({
-    webUrl: zod.alias('u', z.string()),
-    id: zod.alias('i', z.number().optional()),
-    name: z.string().optional(),
-    associatedGroup: zod.coercedEnum(AssociatedGroup).optional()
-  })
-  .strict();
+export const options = z.strictObject({
+  ...globalOptionsZod.shape,
+  webUrl: z.string().alias('u'),
+  id: z.number().optional().alias('i'),
+  name: z.string().optional(),
+  associatedGroup: zod.coercedEnum(AssociatedGroup).optional()
+});
 ```
 
 ## Option validation
@@ -191,6 +225,7 @@ The options that users specify won't always be correct. So instead of passing fa
 Zod automatically validates primitive values, which means that you only need to add 'business' validation logic. Validation is implemented using Zod refinements on the specific property. For example, to validate that the specified URL is a SharePoint URL, use:
 
 ```ts title="src/m365/spo/commands/group/group-get.ts"
+import { z } from 'zod';
 import { globalOptionsZod } from '../../Command.js';
 import { validation } from '../../utils/validation.js';
 import { zod } from '../../utils/zod.js';
@@ -201,16 +236,15 @@ enum AssociatedGroup {
   Visitor = 'visitor'
 };
 
-export const options = globalOptionsZod
-  .extend({
-    webUrl: zod.alias('u', z.string().refine(url => validation.isValidSharePointUrl(url) === true, url => ({
-      message: `Specified URL ${url} is not a valid SharePoint URL`,
-    }))),
-    id: zod.alias('i', z.number().optional()),
-    name: z.string().optional(),
-    associatedGroup: zod.coercedEnum(AssociatedGroup).optional()
-  })
-  .strict();
+export const options = z.strictObject({
+  ...globalOptionsZod.shape,
+  webUrl: z.string().refine(url => validation.isValidSharePointUrl(url) === true, {
+    error: 'Invalid SharePoint URL',
+  }).alias('u'),
+  id: z.number().optional().alias('i'),
+  name: z.string().optional(),
+  associatedGroup: zod.coercedEnum(AssociatedGroup).optional()
+});
 ```
 
 A refinement takes two arguments: a predicate function and an error object. The predicate function is used to validate the input, and the error object is used to define the error message that will be displayed when the input is invalid.
@@ -220,6 +254,7 @@ A refinement takes two arguments: a predicate function and an error object. The 
 Option sets are used to ensure that only one option has a value from a set of options. When no option is used, the command will return an error, and the same goes when multiple of these options are used. To use option sets, add a Zod refinement on the whole schema, which gives you access to all schema properties.
 
 ```ts title="src/m365/spo/commands/group/group-get.ts"
+import { z } from 'zod';
 import { globalOptionsZod } from '../../Command.js';
 import { validation } from '../../utils/validation.js';
 import { zod } from '../../utils/zod.js';
@@ -230,16 +265,15 @@ enum AssociatedGroup {
   Visitor = 'visitor'
 };
 
-export const options = globalOptionsZod
-  .extend({
-    webUrl: zod.alias('u', z.string().refine(url => validation.isValidSharePointUrl(url) === true, url => ({
-      message: `Specified URL ${url} is not a valid SharePoint URL`,
-    }))),
-    id: zod.alias('i', z.number().optional()),
-    name: z.string().optional(),
-    associatedGroup: zod.coercedEnum(AssociatedGroup).optional()
-  })
-  .strict();
+export const options = z.strictObject({
+  ...globalOptionsZod.shape,
+  webUrl: z.string().refine(url => validation.isValidSharePointUrl(url) === true, {
+    error: 'Invalid SharePoint URL',
+  }).alias('u'),
+  id: z.number().optional().alias('i'),
+  name: z.string().optional(),
+  associatedGroup: zod.coercedEnum(AssociatedGroup).optional()
+});
 declare type Options = z.infer<typeof options>;
 
 interface CommandArgs {
@@ -249,20 +283,20 @@ interface CommandArgs {
 class SpoGroupGetCommand extends SpoCommand {
   // ...
 
-  public get schema(): z.ZodTypeAny | undefined {
+  public get schema(): z.ZodType | undefined {
     return options;
   }
 
-  public getRefinedSchema(schema: typeof options): z.ZodEffects<any> | undefined {
+  public getRefinedSchema(schema: typeof options): z.ZodObject<any> | undefined {
     return schema
       .refine(options => options.id !== undefined || options.name !== undefined && !(options.id !== undefined && options.name !== undefined), {
-        message: `Either id or name is required, but not both.`
+        error: `Either id or name is required, but not both.`
       });
   }
 
   public async commandAction(logger: Logger, args: CommandArgs): Promise<void> {
     if (this.verbose) {
-      await logger.logToStderr(`Retrieving information for group in site at ${args.options.webUrl}...`);
+      await logger.logToStderr(`Retrieving information for group in site at '${args.options.webUrl}'...`);
     }
 
     // Command implementation goes here

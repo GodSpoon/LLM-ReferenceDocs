@@ -47,7 +47,7 @@ With the basis of `Mocha` ready, we will set up the basis for `Sinon`. This will
 
 Before we start with the test suite, we want to make sure that the basic functions like `telemetry` and `authentication` are ignored. This will make it so functions like `restoreAuth` return a response when our code, `group-get.ts`, requires it. 
 
-```ts title="group-get.spec.ts"
+```ts title="src/m365/spo/commands/group/group-get.spec.ts"
 // ...
 import sinon from 'sinon';
 import auth from '../../../../Auth.js';
@@ -222,7 +222,7 @@ describe(commands.GROUP_GET, () => {
     };
 
     sinon.stub(request, 'get').callsFake(async opts => {
-      if (opts.url!.endsWith('/_api/web/AssociatedOwnerGroup')) {
+      if (opts.url === 'https://contoso.sharepoint.com/sites/Marketing/_api/web/AssociatedOwnerGroup') {
         return ownerGroupResponse;
       }
 
@@ -231,6 +231,7 @@ describe(commands.GROUP_GET, () => {
 
     await command.action(logger, {
       options: {
+        webUrl: 'https://contoso.sharepoint.com/sites/Marketing',
         associatedGroup: 'Owner'
       }
     });
@@ -254,10 +255,11 @@ describe(commands.GROUP_GET, () => {
   // ...
 
   it('handles errors correctly', async () => {
-    sinon.stub(request, 'get').rejects({error: { error: { message: 'An error has occured' } } });
+    sinon.stub(request, 'get').rejects({error: { error: { message: 'An error has occurred' } } });
 
     await assert.rejects(command.action(logger, {
       options: {
+        webUrl: 'https://contoso.sharepoint.com/sites/Marketing',
         associatedGroup: 'Visitor'
       }
     }), new CommandError('An error has occurred'));

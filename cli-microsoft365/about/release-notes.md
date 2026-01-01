@@ -5,6 +5,33 @@ sidebar_position: 4
 
 # Release notes
 
+## v11.4.0 (Beta)
+
+### New commands
+
+### Changes
+
+- migrated to Zod v4 [#7005](https://github.com/pnp/cli-microsoft365/pull/7005)
+
+## [v11.3.1](https://github.com/pnp/cli-microsoft365/releases/tag/v11.3.1)
+
+### Changes
+
+- fixed [external item add](../cmd/external/item/item-add.mdx) command when using custom properties [#6792](https://github.com/pnp/cli-microsoft365/issues/6792)
+- fixed short option aliases for `spe container` commands [#7064](https://github.com/pnp/cli-microsoft365/issues/7064)
+- extended 'spfx project upgrade' with handling ranges (~) [#7055](https://github.com/pnp/cli-microsoft365/issues/7055)
+
+## [v11.3.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.3.0)
+
+### Changes
+
+- fixed [docs](../contribute/contributing-guide.mdx) contributing guide inconsistencies
+- removed deprecated onBrokenMarkdownLinks docs config
+- enforced delegated access token for OneNote commands [#7049](https://github.com/pnp/cli-microsoft365/issues/7049)
+- updated [login](../cmd/login.mdx) command documentation [#3725](https://github.com/pnp/cli-microsoft365/issues/3725)
+- added support for SPFx v1.22.0 and v1.22.1
+- extended [spfx doctor](../cmd/spfx/spfx-doctor.mdx) with support for heft
+
 ## [v11.2.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.2.0)
 
 ### New commands

@@ -119,52 +119,70 @@ Log in to Microsoft 365 using your own Microsoft Entra application and a persona
 m365 login --authType certificate --appId 31359c7f-bd7e-475c-86db-fdb8c937548c --tenant 31359c7f-bd7e-475c-86db-fdb8c937548a --certificateFile /Users/user/dev/localhost.pfx --password 'pass@word1'
 ```
 
-Log in to Microsoft 365 using a user name and password with `clientId` set in the configuration.
+Log in to Microsoft 365 using a user name and password by providing the application and tenant identifiers explicitly.
 
 ```sh
-m365 login --authType password --userName user@contoso.com --password pass@word1
+m365 login --authType password --appId 31359c7f-bd7e-475c-86db-fdb8c937548c --tenant 31359c7f-bd7e-475c-86db-fdb8c937548a --userName user@contoso.com --password pass@word1
 ```
 
-Log in to Microsoft 365 using a PEM certificate with `clientId` set in the configuration.
+Log in to Microsoft 365 using a PEM certificate with `CLIMICROSOFT365_ENTRAAPPID` and `CLIMICROSOFT365_TENANT` environment variables set.
 
 ```sh
 m365 login --authType certificate --certificateFile /Users/user/dev/localhost.pem
 ```
 
-Log in to Microsoft 365 using a PEM certificate with `clientId` set in the configuration. Use the specified thumbprint.
+Log in to Microsoft 365 using a PEM certificate and a specific thumbprint with `CLIMICROSOFT365_ENTRAAPPID` and `CLIMICROSOFT365_TENANT` environment variables set.
 
 ```sh
-m365 login --authType certificate --certificateFile /Users/user/dev/localhost.pem  --thumbprint EXAMPLE_SECRET_VALUE_PLACEHOLDER
+m365 login --authType certificate --certificateFile /Users/user/dev/localhost.pem --thumbprint EXAMPLE_SECRET_VALUE_PLACEHOLDER
 ```
 
-Log in to Microsoft 365 using a personal information exchange (.pfx) file with `CLIMICROSOFT365_ENTRAAPPID` environment variable set.
+Log in to Microsoft 365 using a PEM certificate by providing the application and tenant identifiers explicitly.
+
+```sh
+m365 login --authType certificate --appId 31359c7f-bd7e-475c-86db-fdb8c937548c --tenant 31359c7f-bd7e-475c-86db-fdb8c937548a --certificateFile /Users/user/dev/localhost.pem
+```
+
+Log in to Microsoft 365 using a personal information exchange (.pfx) file with `CLIMICROSOFT365_ENTRAAPPID` and `CLIMICROSOFT365_TENANT` environment variables set.
 
 ```sh
 m365 login --authType certificate --certificateFile /Users/user/dev/localhost.pfx --password 'pass@word1'
 ```
 
-Log in to Microsoft 365 using a personal information exchange (.pfx) file protected with an empty password and `CLIMICROSOFT365_ENTRAAPPID` environment variable set.
+Log in to Microsoft 365 using a personal information exchange (.pfx) file protected with an empty password with `CLIMICROSOFT365_ENTRAAPPID` and `CLIMICROSOFT365_TENANT` environment variables set.
 
 ```sh
 m365 login --authType certificate --certificateFile /Users/user/dev/localhost.pfx --password
 ```
 
-Log in to Microsoft 365 using a personal information exchange (.pfx) file not protected with a password and `CLIMICROSOFT365_ENTRAAPPID` environment variable set.
+Log in to Microsoft 365 using a personal information exchange (.pfx) file not protected with a password with `CLIMICROSOFT365_ENTRAAPPID` and `CLIMICROSOFT365_TENANT` environment variables set.
 
 ```sh
 m365 login --authType certificate --certificateFile /Users/user/dev/localhost.pfx
 ```
 
-Log in to Microsoft 365 using a personal information exchange (.pfx) file. Use the specified thumbprint and `CLIMICROSOFT365_ENTRAAPPID` environment variable set.
+Log in to Microsoft 365 using a personal information exchange (.pfx) file and a specific thumbprint with `CLIMICROSOFT365_ENTRAAPPID` and `CLIMICROSOFT365_TENANT` environment variables set.
 
 ```sh
 m365 login --authType certificate --certificateFile /Users/user/dev/localhost.pfx --thumbprint EXAMPLE_SECRET_VALUE_PLACEHOLDER --password 'pass@word1'
 ```
 
-Log in to Microsoft 365 using a certificate from a base64-encoded string with `CLIMICROSOFT365_ENTRAAPPID` environment variable set.
+Log in to Microsoft 365 using a personal information exchange (.pfx) file by providing the application and tenant identifiers explicitly.
+
+```sh
+m365 login --authType certificate --appId 31359c7f-bd7e-475c-86db-fdb8c937548c --tenant 31359c7f-bd7e-475c-86db-fdb8c937548a --certificateFile /Users/user/dev/localhost.pfx --password 'pass@word1'
+```
+
+Log in to Microsoft 365 using a certificate from a base64-encoded string with `CLIMICROSOFT365_ENTRAAPPID` and `CLIMICROSOFT365_TENANT` environment variables set.
 
 ```sh
 m365 login --authType certificate --certificateBase64Encoded EXAMPLE_SECRET_VALUE_PLACEHOLDER== --thumbprint EXAMPLE_SECRET_VALUE_PLACEHOLDER
+```
+
+Log in to Microsoft 365 using a certificate from a base64-encoded string by providing the application and tenant identifiers explicitly.
+
+```sh
+m365 login --authType certificate --appId 31359c7f-bd7e-475c-86db-fdb8c937548c --tenant 31359c7f-bd7e-475c-86db-fdb8c937548a --certificateBase64Encoded EXAMPLE_SECRET_VALUE_PLACEHOLDER== --thumbprint EXAMPLE_SECRET_VALUE_PLACEHOLDER
 ```
 
 Log in to Microsoft 365 using a system assigned managed identity with `clientId` set in the configuration. Applies to Azure resources with managed identity enabled, such as Azure Virtual Machines, Azure App Service or Azure Functions.
@@ -197,10 +215,16 @@ Log in to Microsoft 365 using the interactive browser authentication with `clien
 m365 login --authType browser
 ```
 
-Log in to Microsoft 365 using a client secret with `clientId` set in the configuration.
+Log in to Microsoft 365 using a client secret with `CLIMICROSOFT365_ENTRAAPPID` and `CLIMICROSOFT365_TENANT` environment variables set.
 
 ```sh
 m365 login --authType secret --secret topSeCr3t@007
+```
+
+Log in to Microsoft 365 using a client secret by providing the application and tenant identifiers explicitly.
+
+```sh
+m365 login --authType secret --appId 31359c7f-bd7e-475c-86db-fdb8c937548c --tenant 31359c7f-bd7e-475c-86db-fdb8c937548a --secret topSeCr3t@007
 ```
 
 Ensures that the user is signed in, initiates the login flow if the user isn't signed in

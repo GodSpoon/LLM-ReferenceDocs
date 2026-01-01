@@ -181,6 +181,12 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     x: ''
   },
   {
+    name: 'Ayush Jain',
+    company: '',
+    github: 'URAYUSHJAIN',
+    x: 'urayushjain'
+  },
+  {
     name: 'Balamurugan Kailasam',
     company: '',
     github: 'clientbala',
@@ -289,13 +295,13 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     x: 'eliostruyf'
   },
   {
-    name: 'Erwin van Hunen ',
+    name: 'Erwin van Hunen',
     company: 'Valo Intranet',
     github: 'erwinvanhunen',
     x: 'erwinvanhunen'
   },
   {
-    name: 'Fredrik Thorild ',
+    name: 'Fredrik Thorild',
     company: 'Sogeti Sweden',
     github: 'fthorild',
     x: 'taxonomythorild'
@@ -313,7 +319,7 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     x: 'garrytrinder'
   },
   {
-    name: 'Gaston Flores ',
+    name: 'Gaston Flores',
     company: 'Flybondi',
     github: 'gaston-flores',
     x: ''
@@ -445,6 +451,12 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     x: 'LuiseFreese'
   },
   {
+    name: 'Malay Kumar',
+    company: '',
+    github: 'Malay-dev',
+    x: ''
+  },
+  {
     name: 'Mark Powney',
     company: 'Valo Intranet',
     github: 'mpowney',
@@ -517,6 +529,12 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     x: 'ashiqfaleel'
   },
   {
+    name: 'Mohd Fahad Khan',
+    company: 'CTS',
+    github: 'codevfahad',
+    x: ''
+  },
+  {
     name: 'Nanddeep Nachan',
     company: '',
     github: 'nanddeepn',
@@ -551,6 +569,12 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     company: '2toLead',
     github: 'nirav-raval',
     x: 'nrvrvl'
+  },
+  {
+    name: 'Nishkalank Bezawada',
+    company: 'Xenit AB',
+    github: 'NishkalankBezawada',
+    x: 'im_nishkalank'
   },
   {
     name: 'Otto',
@@ -691,8 +715,20 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     x: 'romanrozinov'
   },
   {
+    name: 'Sanket Mundra',
+    company: 'Traceable AI',
+    github: 'sanket-mundra',
+    x: 'MundraSanket'
+  },
+  {
+    name: 'Santhosh Teja Piridi',
+    company: '',
+    github: 'santhosh-7777',
+    x: ''
+  },
+  {
     name: 'Saurabh Tripathi',
-    company: 'Avanade Inc.',
+    company: 'AFRY AB',
     github: 'Saurabh7019',
     x: 'saurabh7019'
   },
@@ -725,6 +761,12 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     company: '',
     github: 'siddharth-vaghasia',
     x: 'siddh_me'
+  },
+  {
+    name: 'Siddheya Kulkarni',
+    company: '',
+    github: 'Asymtode712',
+    x: 'SidKulkarni712'
   },
   {
     name: 'Simon Ågren',
