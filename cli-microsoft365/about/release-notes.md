@@ -5,13 +5,35 @@ sidebar_position: 4
 
 # Release notes
 
-## v11.4.0 (Beta)
+## [v11.4.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.4.0)
 
 ### New commands
+
+**SharePoint:**
+
+- [spo list defaultvalue get](../cmd/spo/list/list-defaultvalue-get.mdx) - gets a specific default column value from a specific document library [#6535](https://github.com/pnp/cli-microsoft365/issues/6535)
+
+**SharePoint Embedded:**
+
+- [spe container recyclebinitem remove](../cmd/spe/container/container-recyclebinitem-remove.mdx) - permanently removes a container from the recycle bin [#6734](https://github.com/pnp/cli-microsoft365/issues/6734)
+
+**SharePoint Premium:**
+
+- [spp autofillcolumn set](../cmd/spp/autofillcolumn/autofillcolumn-set.mdx) - Applies the autofill option to the selected column [#6203](https://github.com/pnp/cli-microsoft365/issues/6203)
 
 ### Changes
 
 - migrated to Zod v4 [#7005](https://github.com/pnp/cli-microsoft365/pull/7005)
+- added minimal permissions for `entra app permission` commands [#6924](https://github.com/pnp/cli-microsoft365/issues/6924)
+- added support for HTML messages using [teams chat message send](../cmd/teams/chat/chat-message-send.mdx) [#6483](https://github.com/pnp/cli-microsoft365/pull/6483)
+- enhanced [teams chat message list](../cmd/teams/chat/chat-message-list.mdx) command [#6484](https://github.com/pnp/cli-microsoft365/pull/6484)
+- added support for Node.js v24 [#7079](https://github.com/pnp/cli-microsoft365/pull/7079)
+- fixed [entra m365group remove](../cmd/entra/m365group/m365group-remove.mdx) command [#7054](https://github.com/pnp/cli-microsoft365/issues/7054)
+- fixed duplicate names for [connection set](../cmd/connection/connection-set.mdx) command [#6174](https://github.com/pnp/cli-microsoft365/issues/6174)
+- enhanced [spo page set](../cmd/spo/page/page-set.mdx) command [#7095](https://github.com/pnp/cli-microsoft365/issues/7095)
+- enhanced [spo page header set](../cmd/spo/page/page-header-set.mdx) command [#7097](https://github.com/pnp/cli-microsoft365/issues/7097)
+- enhanced [spo file add](../cmd/spo/file/file-add.mdx) command [#4691](https://github.com/pnp/cli-microsoft365/issues/4691)
+- fixed workflow caching and docs announcement bar close button
 
 ## [v11.3.1](https://github.com/pnp/cli-microsoft365/releases/tag/v11.3.1)
 

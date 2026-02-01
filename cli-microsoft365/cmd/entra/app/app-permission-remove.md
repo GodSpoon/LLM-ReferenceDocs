@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra app permission remove
 
@@ -41,6 +43,25 @@ m365 entra app permission remove [options]
 ## Remarks
 
 Removing permissions on App Registrations does not immediately remove consent given by an administrator. Explicitly instruct the CLI to revoke consent by using the `--revokeAdminConsent` flag.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource         | Permissions               |
+  |------------------|---------------------------|
+  | Microsoft Graph  | Application.ReadWrite.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource         | Permissions               |
+  |------------------|---------------------------|
+  | Microsoft Graph  | Application.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 
