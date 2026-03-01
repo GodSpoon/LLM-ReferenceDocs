@@ -5,6 +5,24 @@ sidebar_position: 4
 
 # Release notes
 
+## [v11.5.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.5.0)
+
+### New commands
+
+**SharePoint:**
+
+- [spo brandcenter settings list](../cmd/spo/brandcenter/brandcenter-settings-list.mdx) - lists the brand center configuration [#6653](https://github.com/pnp/cli-microsoft365/issues/6653)
+
+**Teams:**
+
+- [teams callrecord get](../cmd/teams/callrecord/callrecord-get.mdx) - gets a specific Teams call [#6738](https://github.com/pnp/cli-microsoft365/issues/6738)
+
+### Changes
+
+- added support for SPFx v1.22.2 [#7114](https://github.com/pnp/cli-microsoft365/issues/7114)
+- enhanced `spo site hubsite` commands with admin permissions [#5970](https://github.com/pnp/cli-microsoft365/issues/5970)
+- fixed asciinema player [#7118](https://github.com/pnp/cli-microsoft365/issues/7118)
+
 ## [v11.4.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.4.0)
 
 ### New commands

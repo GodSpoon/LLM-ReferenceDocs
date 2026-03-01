@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '/docs/cmd/_global.mdx';
+import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs';
 
 # outlook message remove
 
@@ -28,6 +30,25 @@ m365 outlook message remove [options]
 ```
 
 <Global />
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions               |
+  |-----------------|---------------------------|
+  | Microsoft Graph | Mail.ReadWrite            |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                    |
+  |-----------------|--------------------------------|
+  | Microsoft Graph | Mail.ReadWrite                 |
+
+  </TabItem>
+</Tabs>
 
 ## Remarks
 
