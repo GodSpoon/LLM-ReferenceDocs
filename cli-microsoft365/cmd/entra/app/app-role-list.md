@@ -1,5 +1,5 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
-import Global from '/docs/cmd/_global.mdx';
+import Global from '../../_global.mdx';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -39,6 +39,25 @@ m365 entra appregistration role list [options]
 For best performance use the `appObjectId` option to reference the Entra application registration for which to retrieve roles. If you use `appId` or `appName`, this command will first need to find the corresponding object ID for that application.
 
 If the command finds multiple Entra application registrations with the specified app name, it will prompt you to disambiguate which app it should use, listing the discovered object IDs.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions          |
+  | --------------- | -------------------- |
+  | Microsoft Graph | Application.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions          |
+  | --------------- | -------------------- |
+  | Microsoft Graph | Application.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

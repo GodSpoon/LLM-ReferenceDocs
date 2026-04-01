@@ -1,5 +1,5 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
-import Global from '/docs/cmd/_global.mdx';
+import Global from '../../_global.mdx';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -72,12 +72,6 @@ m365 entra user add [options]
 
 ## Remarks
 
-:::info
-
-To use this command you must be a Global administrator, User administrator or Privileged Authentication administrator.
-
-:::
-
 :::note
 
 After running this command, it may take a minute before the user is effectively created in the tenant.
@@ -87,6 +81,31 @@ After running this command, it may take a minute before the user is effectively 
 This command allows using unknown options. For a comprehensive list of user properties, please refer to the [Graph documentation page](https://learn.microsoft.com/graph/api/resources/user?view=graph-rest-1.0#properties).
 
 If the specified option is not found, you will receive a `Resource 'xyz' does not exist or one of its queried reference-property objects are not present.` error.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions        |
+  |-----------------|--------------------|
+  | Microsoft Graph | User.ReadWrite.All |
+
+  :::info
+
+  To use this command you must be a **Global administrator**, **User administrator**, or **Privileged Authentication administrator**.
+
+  :::
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions        |
+  |-----------------|--------------------|
+  | Microsoft Graph | User.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

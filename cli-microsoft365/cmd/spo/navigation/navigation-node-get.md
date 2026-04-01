@@ -1,5 +1,5 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
-import Global from '/docs/cmd/_global.mdx';
+import Global from '../../_global.mdx';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -25,12 +25,31 @@ m365 spo navigation node get [options]
 
 <Global />
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions   |
+  |------------|---------------|
+  | SharePoint | AllSites.Read |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions    |
+  |------------|----------------|
+  | SharePoint | Sites.Read.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Retrieve information for a specific navigation node.
 
 ```sh
-m365 spo navigation node get --webUrl https://contoso.sharepoint.com/sites/team-a --id 2209
+m365 spo navigation node get --webUrl https://contoso.sharepoint.com/sites/Marketing --id 2209
 ```
 
 ## Response
@@ -40,9 +59,22 @@ m365 spo navigation node get --webUrl https://contoso.sharepoint.com/sites/team-
 
   ```json
   {
+    "Children": [
+      {
+        "AudienceIds": null,
+        "CurrentLCID": 1033,
+        "Id": 2033,
+        "IsDocLib": true,
+        "IsExternal": true,
+        "IsVisible": true,
+        "ListTemplateType": 0,
+        "Title": "Microsoft 365",
+        "Url": "https://microsoft365.com",
+        "Children": []
+      }
+    ],
     "AudienceIds": [
-      "0d718612-8407-4d6b-833c-6891a553354f",
-      "f864446f-b4d7-475a-a2ba-1080c6474020"
+      "0d718612-8407-4d6b-833c-6891a553354f"
     ],
     "CurrentLCID": 1033,
     "Id": 2209,
@@ -51,7 +83,7 @@ m365 spo navigation node get --webUrl https://contoso.sharepoint.com/sites/team-
     "IsVisible": true,
     "ListTemplateType": 100,
     "Title": "Work Status",
-    "Url": "/sites/team-a/Lists/Work Status/AllItems.aspx"
+    "Url": "/sites/Marketing/Lists/Work Status/AllItems.aspx"
   }
   ```
 
@@ -59,7 +91,8 @@ m365 spo navigation node get --webUrl https://contoso.sharepoint.com/sites/team-
   <TabItem value="Text">
 
   ```text
-  AudienceIds     : ["0d718612-8407-4d6b-833c-6891a553354f", "f864446f-b4d7-475a-a2ba-1080c6474020"]
+  Children        : [{ AudienceIds: null, CurrentLCID: 1033, Id: 2033, IsDocLib: true, IsExternal: true, IsVisible: true, ListTemplateType: 0, Title: "Microsoft 365", Url: "https://microsoft365.com", Children: [] }]
+  AudienceIds     : ["0d718612-8407-4d6b-833c-6891a553354f"]
   CurrentLCID     : 1033
   Id              : 2209
   IsDocLib        : true
@@ -67,22 +100,22 @@ m365 spo navigation node get --webUrl https://contoso.sharepoint.com/sites/team-
   IsVisible       : true
   ListTemplateType: 100
   Title           : Work Status
-  Url             : /sites/team-a/Lists/Work Status/AllItems.aspx
+  Url             : /sites/Marketing/Lists/Work Status/AllItems.aspx
   ```
 
   </TabItem>
   <TabItem value="CSV">
 
   ```csv
-  AudienceIds,CurrentLCID,Id,IsDocLib,IsExternal,IsVisible,ListTemplateType,Title,Url
-  [""0d718612-8407-4d6b-833c-6891a553354f"", ""f864446f-b4d7-475a-a2ba-1080c6474020""],1033,2209,1,,1,100,Work Status,/sites/team-a/Lists/Work Status/AllItems.aspx
+  CurrentLCID,Id,IsDocLib,IsExternal,IsVisible,ListTemplateType,Title,Url
+  1033,2209,1,,1,100,Work Status,/sites/Marketing/Lists/Work Status/AllItems.aspx
   ```
 
   </TabItem>
   <TabItem value="Markdown">
 
   ```md
-  # spo navigation node get --webUrl "https://contoso.sharepoint.com/sites/team-a" --id "2209"
+  # spo navigation node get --webUrl "https://contoso.sharepoint.com/sites/Marketing" --id "2209"
 
   Date: 1/29/2023
 
@@ -97,7 +130,7 @@ m365 spo navigation node get --webUrl https://contoso.sharepoint.com/sites/team-
   IsVisible | true
   ListTemplateType | 100
   Title | Work Status
-  Url | /sites/team-a/Lists/Work Status/AllItems.aspx
+  Url | /sites/Marketing/Lists/Work Status/AllItems.aspx
   ```
 
   </TabItem>

@@ -1,5 +1,5 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
-import Global from '/docs/cmd/_global.mdx';
+import Global from '../../_global.mdx';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -34,6 +34,25 @@ When the `properties` option includes values with a `/`, for example: `manager/d
 To filter the list of users, include additional options that match the user property that you want to filter with. For example `--displayName Patt` will return all users whose `displayName` starts with `Patt`. Multiple filters will be combined using the `and` operator.
 
 Certain properties cannot be returned within a user collection. The following properties are only supported when retrieving an single user using: `aboutMe`, `birthday`, `hireDate`, `interests`, `mySite`, `pastProjects`, `preferredName`, `responsibilities`, `schools`, `skills`, `mailboxSettings`.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions   |
+  |-----------------|---------------|
+  | Microsoft Graph | User.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions   |
+  |-----------------|---------------|
+  | Microsoft Graph | User.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

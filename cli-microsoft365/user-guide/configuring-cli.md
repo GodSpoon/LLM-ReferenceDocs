@@ -4,7 +4,7 @@ title: Configure CLI
 sidebar_position: 7
 ---
 
-import CLISettings from '/docs/_clisettings.mdx';
+import CLISettings from '../_clisettings.mdx';
 
 # Configure CLI for Microsoft 365
 

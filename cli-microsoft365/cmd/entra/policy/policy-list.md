@@ -1,5 +1,5 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
-import Global from '/docs/cmd/_global.mdx';
+import Global from '../../_global.mdx';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -21,6 +21,25 @@ m365 entra policy list [options]
 ```
 
 <Global />
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions   |
+  |-----------------|---------------|
+  | Microsoft Graph | Policy.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions   |
+  |-----------------|---------------|
+  | Microsoft Graph | Policy.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

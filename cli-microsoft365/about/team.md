@@ -4,7 +4,7 @@ sidebar_position: 3
 hide_table_of_contents: true
 ---
 
-import TeamCardOverview from '../../src/components/TeamCardOverview';
+import TeamCardOverview from '@site/src/components/TeamCardOverview';
 
 # Meet the Team
 
@@ -24,12 +24,6 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     company: 'Blis Digital',
     github: 'appieschot',
     x: 'appieschot'
-  },
-  {
-    name: 'Arjun Menon',
-    company: 'Tata Consultancy Services',
-    github: 'arjunumenon',
-    x: 'arjunumenon'
   },
   {
     name: 'Garry Trinder',
@@ -119,6 +113,12 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     company: 'Blis Digital',
     github: 'appieschot',
     x: 'appieschot'
+  },
+    {
+    name: 'Alejandro Gispert',
+    company: 'AG-SOUND (Software Unlimited Denmark)',
+    github: 'AlejandroGispert',
+    x: ''
   },
   {
     name: 'Aleksandar Nikolić',

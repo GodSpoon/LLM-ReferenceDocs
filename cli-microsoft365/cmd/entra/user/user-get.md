@@ -1,5 +1,5 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
-import Global from '/docs/cmd/_global.mdx';
+import Global from '../../_global.mdx';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -36,9 +36,26 @@ m365 entra user get [options]
 
 ## Remarks
 
-You can retrieve information about a user, either by specifying that user's id, user name (`userPrincipalName`), or email (`mail`), but not all.
-
 If the user with the specified id, user name, or email doesn't exist, you will get a `Resource 'xyz' does not exist or one of its queried reference-property objects are not present.` error.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions   |
+  |-----------------|---------------|
+  | Microsoft Graph | User.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions   |
+  |-----------------|---------------|
+  | Microsoft Graph | User.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

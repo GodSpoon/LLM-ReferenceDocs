@@ -5,6 +5,37 @@ sidebar_position: 4
 
 # Release notes
 
+### New commands
+
+## [v11.6.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.6.0)
+
+**Outlook:**
+
+- [outlook calendargroup list](../cmd/outlook/calendargroup/calendargroup-list.mdx) - Retrieves calendar groups from a user [#7074](https://github.com/pnp/cli-microsoft365/issues/7074)
+
+**SharePoint:**
+
+- [spo agent add](../cmd/spo/agent/agent-add.mdx) - Adds a SharePoint agent [#6763](https://github.com/pnp/cli-microsoft365/issues/6763)
+- [spo tenant site get](../cmd/spo/tenant/tenant-site-get.mdx) - Retrieves the tenant site information [#6654](https://github.com/pnp/cli-microsoft365/issues/6654)
+- [spo site accessrequest setting set](../cmd/spo/site/site-accessrequest-setting-set.mdx ) - Update access requests for a specific site [#6267](https://github.com/pnp/cli-microsoft365/issues/6267)
+
+**Viva:**
+
+- [viva engage role member remove](../cmd/viva/engage/engage-role-member-remove.mdx) - Removes a user from a Viva Engage role [#6821](https://github.com/pnp/cli-microsoft365/issues/6821)
+
+### Changes
+
+- added permission sections for `entra user` commands [#6952](https://github.com/pnp/cli-microsoft365/issues/6952)
+- removed redundant ESLint dev dependency [#7159](https://github.com/pnp/cli-microsoft365/issues/7159)
+- prepared the docs for versioning
+- fixed actions test summary
+- enhanced [spo site add](../cmd/spo/site/site-add.mdx) command to support creating a brand center site [#6668](https://github.com/pnp/cli-microsoft365/issues/6668)
+- enhanced `spo navigation node` commands to return child navigation nodes [#7137](https://github.com/pnp/cli-microsoft365/issues/7137)
+- added permission sections for `entra policy`, `entra resourcenamespace`, `entra roleassignment` commands [#6949](https://github.com/pnp/cli-microsoft365/issues/6949)
+- migrated [entra user recyclebinitem list](../cmd/entra/user/user-recyclebinitem-list.mdx) to Zod [#6908](https://github.com/pnp/cli-microsoft365/pull/6908)
+- added permission sections for `entra app role` commands [#6925](https://github.com/pnp/cli-microsoft365/issues/6925)
+- enhanced [spo list set](../cmd/spo/list/list-set.mdx) command with extra versioning settings [#6655](https://github.com/pnp/cli-microsoft365/issues/6655)
+
 ## [v11.5.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.5.0)
 
 ### New commands

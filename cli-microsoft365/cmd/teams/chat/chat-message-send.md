@@ -1,7 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import Global from '/docs/cmd/_global.mdx';
+import Global from '../../_global.mdx';
 
 # teams chat message send
 

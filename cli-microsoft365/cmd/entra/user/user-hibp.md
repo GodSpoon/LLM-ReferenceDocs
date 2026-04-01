@@ -1,5 +1,5 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
-import Global from '/docs/cmd/_global.mdx';
+import Global from '../../_global.mdx';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -34,6 +34,10 @@ If the user with the specified user name doesn't involved in any breach, you wil
 
 If `API Key` is invalid, you will get a `Required option apiKey not specified` error.
 
+## Permissions
+
+This command does not require any Microsoft 365 permissions.
+ 
 ## Examples
 
 Check if user with by a user name is in a data breach.

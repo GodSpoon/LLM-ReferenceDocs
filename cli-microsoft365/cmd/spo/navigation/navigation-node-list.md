@@ -1,5 +1,5 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
-import Global from '/docs/cmd/_global.mdx';
+import Global from '../../_global.mdx';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -25,18 +25,37 @@ m365 spo navigation node list [options]
 
 <Global />
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions   |
+  |------------|---------------|
+  | SharePoint | AllSites.Read |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions    |
+  |------------|----------------|
+  | SharePoint | Sites.Read.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Retrieve nodes from the top navigation.
 
 ```sh
-m365 spo navigation node list --webUrl https://contoso.sharepoint.com/sites/team-a --location TopNavigationBar
+m365 spo navigation node list --webUrl https://contoso.sharepoint.com/sites/Marketing --location TopNavigationBar
 ```
 
 Retrieve nodes from the quick launch.
 
 ```sh
-m365 spo navigation node list --webUrl https://contoso.sharepoint.com/sites/team-a --location QuickLaunch
+m365 spo navigation node list --webUrl https://contoso.sharepoint.com/sites/Marketing --location QuickLaunch
 ```
 
 ## Response
@@ -57,7 +76,21 @@ m365 spo navigation node list --webUrl https://contoso.sharepoint.com/sites/team
       "IsVisible": true,
       "ListTemplateType": 0,
       "Title": "Navigation Link",
-      "Url": "https://contoso.sharepoint.com"
+      "Url": "https://contoso.sharepoint.com",
+      "Children": [
+        {
+          "AudienceIds": null,
+          "CurrentLCID": 1033,
+          "Id": 2033,
+          "IsDocLib": true,
+          "IsExternal": true,
+          "IsVisible": true,
+          "ListTemplateType": 0,
+          "Title": "Microsoft 365",
+          "Url": "https://microsoft365.com",
+          "Children": []
+        }
+      ]
     }
   ]
   ```
