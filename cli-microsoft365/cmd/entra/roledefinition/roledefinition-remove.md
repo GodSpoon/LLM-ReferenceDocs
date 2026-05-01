@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra roledefinition remove
 
@@ -33,6 +35,25 @@ m365 entra roledefinition remove [options]
 When the role definition is removed, all the associated role assignments are deleted.
 
 :::
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                        |
+  |-----------------|------------------------------------|
+  | Microsoft Graph | RoleManagement.ReadWrite.Directory |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                        |
+  |-----------------|------------------------------------|
+  | Microsoft Graph | RoleManagement.ReadWrite.Directory |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

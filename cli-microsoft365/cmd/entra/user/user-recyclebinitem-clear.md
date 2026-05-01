@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra user recyclebinitem clear
 
@@ -33,6 +35,25 @@ To use this command you must be a Global administrator, User administrator or Pr
 After running this command, it may take a minute before all deleted users are effectively removed from the tenant.
 
 :::
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions            |
+  |-----------------|------------------------|
+  | Microsoft Graph | User.DeleteRestore.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions            |
+  |-----------------|------------------------|
+  | Microsoft Graph | User.DeleteRestore.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

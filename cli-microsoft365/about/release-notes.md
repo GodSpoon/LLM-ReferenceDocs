@@ -5,9 +5,54 @@ sidebar_position: 4
 
 # Release notes
 
+## v11.7.0
+
 ### New commands
 
+**Outlook:**
+
+- [outlook calendar get](../cmd/outlook/calendar/calendar-get.mdx) - Retrieves the calendar of a user or a group [#7115](https://github.com/pnp/cli-microsoft365/issues/7115)
+- [outlook calendar add](../cmd/outlook/calendar/calendar-add.mdx) - Creates a new calendar for a user [#7102](https://github.com/pnp/cli-microsoft365/issues/7102)
+- [outlook calendar remove](../cmd/outlook/calendar/calendar-remove.mdx) - Removes the calendar of a user [#7119](https://github.com/pnp/cli-microsoft365/issues/7119)
+- [outlook calendar set](../cmd/outlook/calendar/calendar-set.mdx) - Updates a calendar for a user [#7117](https://github.com/pnp/cli-microsoft365/issues/7117)
+- [outlook event list](../cmd/outlook/event/event-list.mdx) - Retrieves a list of events from a specific calendar of a user [#7083](https://github.com/pnp/cli-microsoft365/issues/7083)
+- [outlook event cancel](../cmd/outlook/event/event-cancel.mdx) - Cancels a calendar event [#7105](https://github.com/pnp/cli-microsoft365/issues/7105)
+- [outlook event remove](../cmd/outlook/event/event-remove.mdx) - Removes an event from a calendar [#7104](https://github.com/pnp/cli-microsoft365/issues/7104)
+- [outlook calendargroup set](../cmd/outlook/calendargroup/calendargroup-set.mdx) - Updates a calendar group for a user [#7109](https://github.com/pnp/cli-microsoft365/issues/7109)
+- [outlook calendargroup get](../cmd/outlook/calendargroup/calendargroup-get.mdx) - Retrieves the calendar group of a user [#7111](https://github.com/pnp/cli-microsoft365/issues/7111)
+
+**SharePoint:**
+
+- [spo brandcenter colors list](../cmd/spo/brandcenter/brandcenter-colors-list.mdx) - lists the brand center colors [#7162](https://github.com/pnp/cli-microsoft365/issues/7162)
+- [spo file archive](../cmd/spo/file/file-archive.mdx) - Archives a file [#7175](https://github.com/pnp/cli-microsoft365/issues/7175)
+
+### Changes
+
+- added versioning to documentation [#1999](https://github.com/pnp/cli-microsoft365/issues/1999)
+- added permissions sections for `entra user license` commands [#6953](https://github.com/pnp/cli-microsoft365/issues/6953)
+- improved error when retrieving an app by object ID [#6884](https://github.com/pnp/cli-microsoft365/issues/6884)
+- enhanced [teams chat message list](../cmd/teams/chat/chat-message-list.mdx) command [#7169](https://github.com/pnp/cli-microsoft365/issues/7169)
+- added permissions sections for 'entra m365group conversation' commands [#6940](https://github.com/pnp/cli-microsoft365/issues/6940)
+- added permissions sections for 'entra license' commands [#6939](https://github.com/pnp/cli-microsoft365/issues/6939)
+- enhanced SPFx ci/cd commands to set Node version based on project version [#6717](https://github.com/pnp/cli-microsoft365/issues/6717)
+- added Permissions section for `entra user recyclebinitem` commands [#6954](https://github.com/pnp/cli-microsoft365/issues/6954)
+- added minimal permission for `entra user` commands [#6955](https://github.com/pnp/cli-microsoft365/issues/6955)
+- added Permissions section for `exo approleassignment` and `file` commands [#6977](https://github.com/pnp/cli-microsoft365/issues/6977)
+- added support for SPFx v1.23.0-rc.0. [#7170](https://github.com/pnp/cli-microsoft365/issues/7170)
+- added minimal permissions for `external` commands [#6978](https://github.com/pnp/cli-microsoft365/issues/6978)
+- enhanced [spo propertybag set](../cmd/spo/propertybag/propertybag-set.mdx) command to remove the error that is thrown if a site has NoScript enabled [#6459](https://github.com/pnp/cli-microsoft365/issues/6459)
+- enhanced [spo tenant settings set](../cmd/spo/tenant/tenant-settings-set.mdx) command to add EXAMPLE_SECRET_VALUE_PLACEHOLDER property [#6458](https://github.com/pnp/cli-microsoft365/issues/6458)
+- added minimal permissions for `entra roledefinition` commands [#6950](https://github.com/pnp/cli-microsoft365/issues/6950)
+- added minimal permissions for `entra siteclassification` commands [#6951](https://github.com/pnp/cli-microsoft365/issues/6951)
+- added minimal permissions for `entra m365group user` commands [#6942](https://github.com/pnp/cli-microsoft365/issues/6942)
+- migrated command [external connection list](../cmd/external/connection/connection-list.mdx) to Zod [#6904](https://github.com/pnp/cli-microsoft365/issues/6904)
+- migrated command [context option list](../cmd/context/option/option-list.mdx) to Zod [#6910](https://github.com/pnp/cli-microsoft365/issues/6910)
+- migrated command [entra resourcenamespace list](../cmd/entra/resourcenamespace/resourcenamespace-list.mdx) to Zod [#6907](https://github.com/pnp/cli-microsoft365/issues/6907)
+- enhanced `applicationcustomizer` commands to add `hostProperties` support [#6825](https://github.com/pnp/cli-microsoft365/issues/6825)
+
 ## [v11.6.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.6.0)
+
+### New commands
 
 **Outlook:**
 

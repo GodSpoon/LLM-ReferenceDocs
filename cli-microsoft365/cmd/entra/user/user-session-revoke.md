@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra user session revoke
 
@@ -40,6 +42,25 @@ There might be a small delay of a few minutes before tokens are revoked.
 This API doesn't revoke sign-in sessions for external users, because external users sign in through their home tenant.
 
 :::
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions             |
+  |-----------------|-------------------------|
+  | Microsoft Graph | User.RevokeSessions.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions             |
+  |-----------------|-------------------------|
+  | Microsoft Graph | User.RevokeSessions.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

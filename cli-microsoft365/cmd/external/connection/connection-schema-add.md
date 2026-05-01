@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # external connection schema add
 
@@ -31,6 +33,25 @@ m365 search externalconnection schema add
 ```
 
 <Global />
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                          |
+  |-----------------|--------------------------------------|
+  | Microsoft Graph | ExternalConnection.ReadWrite.OwnedBy |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                          |
+  |-----------------|--------------------------------------|
+  | Microsoft Graph | ExternalConnection.ReadWrite.OwnedBy |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

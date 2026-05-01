@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra roledefinition set
 
@@ -41,6 +43,25 @@ m365 entra roledefinition set [options]
 ## Remarks
 
 Use the `m365 entra rolepermission list --resourceNamespace microsoft.directory` command to get a list of available resource actions.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                        |
+  |-----------------|------------------------------------|
+  | Microsoft Graph | RoleManagement.ReadWrite.Directory |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                        |
+  |-----------------|------------------------------------|
+  | Microsoft Graph | RoleManagement.ReadWrite.Directory |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

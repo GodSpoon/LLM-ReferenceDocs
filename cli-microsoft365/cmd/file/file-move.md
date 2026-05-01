@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # file move
 
@@ -36,6 +38,25 @@ m365 file move [options]
 
 - If the source and target locations are within the same document library or drive, the command will utilize the Move DriveItem API, preserving the version history of the file.
 - If the source and target locations are in different document libraries or drives, the command will use a copy-and-delete combination to move the file. Please note that in this case, version history will not be retained.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions         |
+  |-----------------|---------------------|
+  | Microsoft Graph | Sites.ReadWrite.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions         |
+  |-----------------|---------------------|
+  | Microsoft Graph | Sites.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

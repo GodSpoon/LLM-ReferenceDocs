@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra m365group user set
 
@@ -41,6 +43,25 @@ m365 entra m365group user set [options]
 ## Remarks
 
 The command will return an error if the user already has the specified role in the given Microsoft 365 Group or Microsoft Teams team.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                             |
+  |-----------------|-----------------------------------------|
+  | Microsoft Graph | Group.ReadWrite.All, User.ReadBasic.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                        |
+  |-----------------|------------------------------------|
+  | Microsoft Graph | Group.ReadWrite.All, User.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

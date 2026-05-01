@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # external connection remove
 
@@ -35,6 +37,25 @@ m365 search externalconnection remove
 ## Remarks
 
 If the command finds multiple external connections with the specified name, it will prompt you to disambiguate which external connection it should remove, listing the discovered IDs.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                          |
+  |-----------------|--------------------------------------|
+  | Microsoft Graph | ExternalConnection.ReadWrite.OwnedBy |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                          |
+  |-----------------|--------------------------------------|
+  | Microsoft Graph | ExternalConnection.ReadWrite.OwnedBy |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # entra m365group user add
 
@@ -43,6 +45,25 @@ m365 teams user add [options]
 ```
 
 <Global />
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                             |
+  |-----------------|-----------------------------------------|
+  | Microsoft Graph | Group.ReadWrite.All, User.ReadBasic.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                        |
+  |-----------------|------------------------------------|
+  | Microsoft Graph | Group.ReadWrite.All, User.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 
