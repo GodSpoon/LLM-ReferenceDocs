@@ -5,7 +5,43 @@ sidebar_position: 4
 
 # Release notes
 
-## v11.7.0
+## [v11.9.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.9.0)
+
+### New commands
+
+**SharePoint Embedded:**
+
+- [spe container set](../cmd/spe/container/container-set.mdx) - Updates a SharePoint Embedded container [#6846](https://github.com/pnp/cli-microsoft365/issues/6846)
+
+### Changes
+
+- added prompting on invalid option sets in Zod-enabled commands. [#7060](https://github.com/pnp/cli-microsoft365/issues/7060)
+- updated vulnerable dependencies
+- enhanced the signature of SPFx rules to accepts object as args. [#7067](https://github.com/pnp/cli-microsoft365/issues/7067)
+- added ability to update text web parts. [#7287](https://github.com/pnp/cli-microsoft365/issues/7287)
+- enhanced [spe container get](../cmd/spe/container/container-get.mdx) command to add name property [#6719](https://github.com/pnp/cli-microsoft365/issues/6719)
+- fixed [outlook calendar get](../cmd/outlook/calendar/calendar-get.mdx) command [#7249](https://github.com/pnp/cli-microsoft365/issues/7249)
+
+## [v11.8.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.8.0)
+
+### New commands
+
+**Outlook:**
+
+- [outlook calendargroup remove](../cmd/outlook/calendargroup/calendargroup-remove.mdx) - Removes a calendar group [#7112](https://github.com/pnp/cli-microsoft365/issues/7112)
+
+### Changes
+
+- updated 'spfx project github workflow add' sppkg path resolution [#7233](https://github.com/pnp/cli-microsoft365/issues/7233)
+- added support for SPFx v1.23.0. [#7257](https://github.com/pnp/cli-microsoft365/issues/7257)
+
+## [v11.7.1](https://github.com/pnp/cli-microsoft365/releases/tag/v11.7.1)
+
+### Changes
+
+- Updates dependencies and transitive dependencies
+
+## [v11.7.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.7.0)
 
 ### New commands
 

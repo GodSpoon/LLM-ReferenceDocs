@@ -16,8 +16,11 @@ m365 spe container get [options]
 ## Options
 
 ```md definition-list
-`-i, --id <id>`
-: The Id of the container instance.
+`-i, --id [id]`
+: The Id of the container instance. Specify either `id` or `name` but not both.
+
+`-n, --name [name]`
+: Display name of the container. Specify either `id` or `name` but not both.
 ```
 
 <Global />
@@ -43,10 +46,16 @@ m365 spe container get [options]
 
 ## Examples
 
-Gets a container of a specific type.
+Gets a container of a specific type by id.
 
 ```sh
 m365 spe container get --id "b!EXAMPLE_SECRET_VALUE_PLACEHOLDER"
+```
+
+Gets a container of a specific type by display name.
+
+```sh
+m365 spe container get --name "My Application Storage Container"
 ```
 
 ## Response
