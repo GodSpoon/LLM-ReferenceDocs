@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spo cdn origin list
 
-List CDN origins settings for the current SharePoint Online tenant
+Lists CDN origins settings for the current SharePoint Online tenant
 
 ## Usage
 

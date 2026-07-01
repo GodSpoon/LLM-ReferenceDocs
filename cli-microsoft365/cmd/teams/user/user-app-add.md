@@ -3,7 +3,7 @@ import Global from '../../_global.mdx';
 
 # teams user app add
 
-Install an app in the personal scope of the specified user
+Installs an app in the personal scope of the specified user
 
 ## Usage
 

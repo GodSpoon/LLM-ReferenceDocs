@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spo storageentity get
 
-Get details for the specified tenant property
+Gets details for the specified tenant property
 
 ## Usage
 

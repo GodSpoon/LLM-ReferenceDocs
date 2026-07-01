@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # tenant people pronouns set
 
-Manage pronouns settings for an organization
+Manages pronouns settings for an organization
 
 ## Usage
 

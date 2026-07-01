@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # purview auditlog list
 
-List audit logs within your tenant
+Lists audit logs within your tenant
 
 ## Usage
 

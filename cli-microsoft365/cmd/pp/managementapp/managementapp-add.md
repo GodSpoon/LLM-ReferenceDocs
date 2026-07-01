@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # pp managementapp add
 
-Register management application for Power Platform
+Registers management application for Power Platform
 
 ## Usage
 

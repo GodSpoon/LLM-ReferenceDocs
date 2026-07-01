@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # entra pim role assignment remove
 
-Request deactivation of an Entra role assignment for a user or group.
+Requests deactivation of an Entra role assignment for a user or group.
 
 ## Usage
 

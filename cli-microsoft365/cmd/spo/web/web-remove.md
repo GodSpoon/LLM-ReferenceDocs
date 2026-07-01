@@ -3,7 +3,7 @@ import Global from '../../_global.mdx';
 
 # spo web remove
 
-Delete specified subsite
+Deletes specified subsite
 
 ## Usage
 

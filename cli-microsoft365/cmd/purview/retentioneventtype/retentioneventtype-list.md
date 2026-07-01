@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # purview retentioneventtype list
 
-Get a list of retention event types
+Gets a list of retention event types
 
 ## Usage
 

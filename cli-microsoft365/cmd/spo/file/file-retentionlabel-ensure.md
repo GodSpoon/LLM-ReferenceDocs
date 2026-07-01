@@ -3,7 +3,7 @@ import Global from '../../_global.mdx';
 
 # spo file retentionlabel ensure
 
-Apply a retention label to a file
+Applies a retention label to a file
 
 ## Usage
 

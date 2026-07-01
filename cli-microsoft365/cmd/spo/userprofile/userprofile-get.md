@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spo userprofile get
 
-Get SharePoint user profile properties for the specified user
+Gets SharePoint user profile properties for the specified user
 
 ## Usage
 

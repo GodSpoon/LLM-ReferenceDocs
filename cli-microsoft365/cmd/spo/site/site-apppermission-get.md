@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spo site apppermission get
 
-Get a specific application permissions for the site
+Gets a specific application permissions for the site
 
 ## Usage
 

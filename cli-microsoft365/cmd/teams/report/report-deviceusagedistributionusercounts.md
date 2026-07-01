@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # teams report deviceusagedistributionusercounts
 
-Get the number of Microsoft Teams unique users by device type. 
+Gets the number of Microsoft Teams unique users by device type. 
 
 ## Usage
 

@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # outlook roomlist list
 
-Get a collection of available roomlists
+Gets a collection of available roomlists
 
 ## Usage
 

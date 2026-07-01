@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # onenote notebook add
 
-Create a new OneNote notebook.
+Creates a new OneNote notebook.
 
 ## Usage
 

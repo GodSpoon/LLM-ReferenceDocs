@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # entra oauth2grant set
 
-Update OAuth2 permissions for the service principal
+Updates OAuth2 permissions for the service principal
 
 ## Usage
 

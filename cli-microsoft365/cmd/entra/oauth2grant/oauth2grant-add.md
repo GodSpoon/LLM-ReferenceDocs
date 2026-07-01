@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # entra oauth2grant add
 
-Grant the specified service principal OAuth2 permissions to the specified resource
+Grants the specified service principal OAuth2 permissions to the specified resource
 
 ## Usage
 

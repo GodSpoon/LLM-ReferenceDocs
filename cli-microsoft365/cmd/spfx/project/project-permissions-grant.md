@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spfx project permissions grant
 
-Grant API permissions defined in the current SPFx project
+Grants API permissions defined in the current SPFx project
 
 ## Usage
 

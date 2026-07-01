@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spo tenant applicationcustomizer get
 
-Get an application customizer that is installed tenant-wide
+Gets an application customizer that is installed tenant-wide
 
 ## Usage
 

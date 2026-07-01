@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # pp gateway get
 
-Get information about the specified gateway
+Gets information about the specified gateway
 
 ## Usage
 

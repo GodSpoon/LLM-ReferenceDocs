@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # purview threatassessment add
 
-Create a threat assessment
+Creates a threat assessment
 
 ## Usage
 

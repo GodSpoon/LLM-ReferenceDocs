@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # teams meeting add
 
-Create a new online meeting
+Creates a new online meeting
 
 ## Usage
 

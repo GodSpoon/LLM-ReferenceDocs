@@ -3,7 +3,7 @@ import Global from '../../_global.mdx';
 
 # spo hubsite disconnect
 
-Disconnect a hub site from its parent hub site
+Disconnects a hub site from its parent hub site
 
 ## Usage
 

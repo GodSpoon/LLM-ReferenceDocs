@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # purview retentionevent get
 
-Get a retention event
+Gets a retention event
 
 ## Usage
 

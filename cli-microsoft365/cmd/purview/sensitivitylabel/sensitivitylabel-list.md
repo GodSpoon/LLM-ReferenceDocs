@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # purview sensitivitylabel list
 
-Get a list of sensitivity labels
+Gets a list of sensitivity labels
 
 ## Usage
 

@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # pp dataverse table get
 
-List a dataverse table in a given environment
+Gets a dataverse table in a given environment
 
 ## Usage
 

@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # tenant serviceannouncement health get
 
-Get the health report of a specified service for a tenant
+Gets the health report of a specified service for a tenant
 
 ## Usage
 

@@ -3,14 +3,14 @@ import Global from '../../_global.mdx';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# spo file version keep
+# spo file unarchive
 
-Ensures that a specific file version will never expire
+Unarchives a file
 
 ## Usage
 
 ```sh
-m365 spo file version keep [options]
+m365 spo file unarchive [options]
 ```
 
 ## Options
@@ -19,14 +19,14 @@ m365 spo file version keep [options]
 `-u, --webUrl <webUrl>`
 : The URL of the site where the file is located.
 
-`--fileUrl [fileUrl]`
-: The server- or site-relative decoded URL. Specify either `fileUrl` or `fileId` but not both.
+`--url [url]`
+: The server- or site-relative decoded URL of the file to unarchive. Specify either `url` or `id`, but not both.
 
-`-i, --fileId [fileId]`
-: The UniqueId (GUID) of the file. Specify either `fileUrl` or `fileId` but not both.
+`-i, --id [id]`
+: The UniqueId (GUID) of the file to unarchive. Specify either `url` or `id`, but not both.
 
-`--label <label>`
-: Label of the version.
+`-f, --force`
+: Don't prompt for confirmation.
 ```
 
 <Global />
@@ -52,16 +52,16 @@ m365 spo file version keep [options]
 
 ## Examples
 
-Mark a file version as never expiring by file URL.
+Unarchive a file by id without prompting for confirmation
 
 ```sh
-m365 spo file version keep --webUrl "https://contoso.sharepoint.com/sites/marketing" --fileUrl "/sites/marketing/Documents/report.docx" --label "6.0"
+m365 spo file unarchive --webUrl https://contoso.sharepoint.com/sites/Marketing --id 7a8c9207-7745-4cda-b0e2-be2618ee3030 --force
 ```
 
-Mark a file version as never expiring by file ID.
+Unarchive a file by URL with prompting for confirmation
 
 ```sh
-m365 spo file version keep --webUrl "https://contoso.sharepoint.com/sites/marketing" --fileId "12345678-90ab-cdef-1234-567890abcdef" --label "6.0"
+m365 spo file unarchive --webUrl https://contoso.sharepoint.com/sites/Marketing --url '/sites/Marketing/shared documents/document.docx'
 ```
 
 ## Response

@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spo web add
 
-Create new subsite
+Creates new subsite
 
 ## Usage
 

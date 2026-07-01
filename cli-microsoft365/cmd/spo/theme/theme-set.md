@@ -3,7 +3,7 @@ import Global from '../../_global.mdx';
 
 # spo theme set
 
-Add or update a theme
+Adds or updates a theme
 
 ## Usage
 

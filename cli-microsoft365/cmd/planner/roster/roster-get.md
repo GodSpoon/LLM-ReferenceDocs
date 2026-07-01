@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # planner roster get
 
-Gets information about the specific Microsoft Planner Roster.
+Gets information about the specific Microsoft Planner Roster
 
 ## Usage
 

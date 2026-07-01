@@ -3,7 +3,7 @@ import Global from '../../_global.mdx';
 
 # spo hubsite connect
 
-Connect a hub site to a parent hub site
+Connects a hub site to a parent hub site
 
 ## Usage
 

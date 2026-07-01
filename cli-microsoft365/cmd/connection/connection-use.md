@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # connection use
 
-Activate the specified Microsoft 365 tenant connection
+Activates the specified Microsoft 365 tenant connection
 
 ## Usage
 

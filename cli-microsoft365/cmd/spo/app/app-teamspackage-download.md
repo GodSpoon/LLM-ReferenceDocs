@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo app teamspackage download
 
@@ -39,6 +41,25 @@ Download the Teams app package for an SPFx solution works only for solutions dep
 If you try to download Teams app package for an SPFx solution that doesn't support deployment to Teams, you'll get the _Request failed with status code 404_ error.
 
 For maximum performance, specify the URL of the tenant app catalog, the item ID (`appItemId`) of the SPFx package for which you want to download the Teams app package and the name of the file where you want to save the downloaded package to (`fileName`).
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions   |
+  |------------|---------------|
+  | SharePoint | AllSites.Read |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions    |
+  |------------|----------------|
+  | SharePoint | Sites.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

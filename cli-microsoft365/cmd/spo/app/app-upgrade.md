@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo app upgrade
 
@@ -29,6 +31,25 @@ m365 spo app upgrade [options]
 ## Remarks
 
 If the app with the specified ID doesn't exist in the app catalog, the command will fail with an error.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions          |
+  |------------|----------------------|
+  | SharePoint | AllSites.FullControl |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions           |
+  |------------|-----------------------|
+  | SharePoint | Sites.FullControl.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

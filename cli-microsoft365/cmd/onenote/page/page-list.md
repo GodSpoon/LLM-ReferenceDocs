@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # onenote page list
 
-Retrieve a list of OneNote pages.
+Retrieves a list of OneNote pages.
 
 ## Usage
 

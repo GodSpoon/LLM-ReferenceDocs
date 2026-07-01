@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo app install
 
@@ -29,6 +31,25 @@ m365 spo app install [options]
 ## Remarks
 
 If the app with the specified ID doesn't exist in the app catalog, the command will fail with an error. Before you can install app in a site, you have to add it to the tenant or site collection app catalog first using the [spo app add](./app-add.mdx) command.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions          |
+  |------------|----------------------|
+  | SharePoint | AllSites.FullControl |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions           |
+  |------------|-----------------------|
+  | SharePoint | Sites.FullControl.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

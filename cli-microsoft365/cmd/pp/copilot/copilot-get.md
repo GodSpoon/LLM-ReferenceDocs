@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # pp copilot get
 
-Get information about the specified copilot
+Gets information about the specified copilot
 
 ## Usage
 

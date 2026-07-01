@@ -3,7 +3,7 @@ import Global from '../_global.mdx';
 
 # connection set
 
-Rename the specified connection
+Renames the specified connection
 
 ## Usage
 

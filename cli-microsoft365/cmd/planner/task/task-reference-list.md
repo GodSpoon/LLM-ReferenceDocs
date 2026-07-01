@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # planner task reference list
 
-Retrieve the references associated to a Planner task.
+Retrieves the references associated to a Planner task
 
 ## Usage
 

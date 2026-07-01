@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spo app instance list
 
-Retrieve apps installed in a site
+Retrieves apps installed in a site
 
 ## Usage
 
@@ -21,6 +21,25 @@ m365 spo app instance list [options]
 ```
 
 <Global />
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions   |
+  |------------|---------------|
+  | SharePoint | AllSites.Read |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions    |
+  |------------|----------------|
+  | SharePoint | Sites.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

@@ -1,9 +1,11 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo commandset remove
 
-Remove a ListView Command Set that is added to a site
+Removes a ListView Command Set that is added to a site
 
 ## Usage
 
@@ -38,6 +40,25 @@ m365 spo commandset remove [options]
 ## Remarks
 
 This command can be used for removing a ListView Command Set from a specific site. To remove a ListView Command Set that's installed tenant-wide, view our dedicated [spo tenant commandset remove](../tenant/tenant-commandset-remove.mdx) command.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions          |
+  |------------|----------------------|
+  | SharePoint | AllSites.FullControl |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions           |
+  |------------|-----------------------|
+  | SharePoint | Sites.FullControl.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

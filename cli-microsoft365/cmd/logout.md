@@ -3,7 +3,7 @@ import Global from './_global.mdx';
 
 # logout
 
-Log out from Microsoft 365
+Logs out from Microsoft 365
 
 ## Usage
 

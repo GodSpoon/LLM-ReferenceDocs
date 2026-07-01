@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # todo task list
 
-List tasks from a Microsoft To Do task list
+Lists tasks from a Microsoft To Do task list
 
 ## Usage
 

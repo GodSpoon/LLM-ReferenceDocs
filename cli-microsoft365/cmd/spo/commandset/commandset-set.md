@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo commandset set
 
@@ -67,6 +69,25 @@ When using the `--clientSideComponentProperties` option it's possible to enter a
 :::
 
 This command can be used for updating a ListView Command Set on a specific site. To update a ListView Command Set that's installed tenant-wide, view our dedicated [spo tenant commandset set](../tenant/tenant-commandset-set.mdx) command.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions          |
+  |------------|----------------------|
+  | SharePoint | AllSites.FullControl |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions           |
+  |------------|-----------------------|
+  | SharePoint | Sites.FullControl.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

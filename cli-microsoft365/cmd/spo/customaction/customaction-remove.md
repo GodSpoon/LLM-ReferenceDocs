@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo customaction remove
 
@@ -35,6 +37,25 @@ m365 spo customaction remove [options]
 ## Remarks
 
 If the command finds multiple user custom actions with the specified title, it will prompt you to disambiguate which user custom action it should use, listing the discovered IDs.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions          |
+  |------------|----------------------|
+  | SharePoint | AllSites.FullControl |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions           |
+  |------------|-----------------------|
+  | SharePoint | Sites.FullControl.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # teams report useractivityuserdetail
 
-Get details about Microsoft Teams user activity by user
+Gets details about Microsoft Teams user activity by user
 
 ## Usage
 

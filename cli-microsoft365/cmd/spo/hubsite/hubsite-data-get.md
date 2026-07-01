@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spo hubsite data get
 
-Get hub site data for the specified site
+Gets hub site data for the specified site
 
 ## Usage
 

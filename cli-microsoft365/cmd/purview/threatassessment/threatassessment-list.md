@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # purview threatassessment list
 
-Get a list of threat assessments
+Gets a list of threat assessments
 
 ## Usage
 

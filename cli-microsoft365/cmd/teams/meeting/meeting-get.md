@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # teams meeting get
 
-Get specified meeting details
+Gets specified meeting details
 
 ## Usage
 

@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # outlook calendargroup get
 
-Retrieves a calendar group for a user.
+Retrieves a calendar group for a user
 
 ## Usage
 

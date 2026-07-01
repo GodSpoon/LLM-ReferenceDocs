@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # login
 
-Log in to Microsoft 365
+Logs in to Microsoft 365
 
 ## Usage
 

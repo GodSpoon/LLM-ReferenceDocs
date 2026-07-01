@@ -3,7 +3,7 @@ import Global from '../../_global.mdx';
 
 # spo site chrome set
 
-Set the chrome header and footer for the specified site
+Sets the chrome header and footer for the specified site
 
 ## Usage
 

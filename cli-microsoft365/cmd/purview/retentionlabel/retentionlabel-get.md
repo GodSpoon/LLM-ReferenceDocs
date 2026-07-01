@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # purview retentionlabel get
 
-Get a retention label
+Gets a retention label
 
 ## Usage
 

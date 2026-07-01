@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # todo task set
 
-Update a task in a Microsoft To Do task list
+Updates a task in a Microsoft To Do task list
 
 ## Usage
 

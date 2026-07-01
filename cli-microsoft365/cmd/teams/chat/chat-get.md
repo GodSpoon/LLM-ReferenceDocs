@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # teams chat get
 
-Get a Microsoft Teams chat conversation by id, participants or chat name.
+Gets a Microsoft Teams chat conversation by id, participants or chat name.
 
 ## Usage
 

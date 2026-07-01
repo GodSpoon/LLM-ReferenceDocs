@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # purview retentioneventtype remove
 
-Delete a retention event type
+Deletes a retention event type
 
 ## Usage
 

@@ -3,7 +3,7 @@ import Global from '../../_global.mdx';
 
 # spo listitem roleinheritance break
 
-Break inheritance of list item.
+Breaks inheritance of list item.
 
 ## Usage
 

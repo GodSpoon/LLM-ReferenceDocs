@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo customaction add
 
@@ -88,6 +90,25 @@ The `--rights` option accepts **case sensitive** values.
 When using the `--clientSideComponentProperties` option it's possible to enter a JSON string. In PowerShell 5 to 7.2 [specific escaping rules](./../../../user-guide/using-cli.mdx#escaping-double-quotes-in-powershell) apply due to an issue. Remember that you can also use [file tokens](./../../../user-guide/using-cli.mdx#EXAMPLE_SECRET_VALUE_PLACEHOLDER) instead.
 
 :::
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions     |
+  |------------|-----------------|
+  | SharePoint | AllSites.Manage |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions      |
+  |------------|------------------|
+  | SharePoint | Sites.Manage.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

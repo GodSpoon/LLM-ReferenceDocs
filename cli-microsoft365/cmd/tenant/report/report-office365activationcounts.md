@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # tenant report office365activationcounts
 
-Get the count of Microsoft 365 activations on desktops and devices
+Gets the count of Microsoft 365 activations on desktops and devices
 
 ## Usage
 

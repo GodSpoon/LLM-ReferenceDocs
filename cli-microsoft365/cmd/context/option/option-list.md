@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # context option list
 
-List all options added to the context
+Lists all options added to the context
 
 ## Usage
 

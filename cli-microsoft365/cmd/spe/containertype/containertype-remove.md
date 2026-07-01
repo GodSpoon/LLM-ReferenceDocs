@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # spe containertype remove
 
-Remove a specific container type
+Removes a specific container type
 
 ## Usage
 

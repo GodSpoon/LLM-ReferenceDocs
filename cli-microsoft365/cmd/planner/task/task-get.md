@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # planner task get
 
-Retrieve the specified planner task
+Retrieves the specified planner task
 
 ## Usage
 

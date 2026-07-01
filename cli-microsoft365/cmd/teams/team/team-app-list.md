@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 # teams team app list
 
-List apps installed in the specified team
+Lists apps installed in the specified team
 
 ## Usage
 
