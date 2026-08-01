@@ -1,9 +1,11 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo homesite remove
 
-Removes a Home Site
+Removes a home site
 
 ## Usage
 
@@ -31,15 +33,34 @@ To use this command you must be either **SharePoint Administrator** or **Global 
 
 :::
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions          |
+  |------------|----------------------|
+  | SharePoint | AllSites.FullControl |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions           |
+  |------------|-----------------------|
+  | SharePoint | Sites.FullControl.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
-Removes a Home site specified by URL.
+Removes a home site specified by URL.
 
 ```sh
 m365 spo homesite remove --url "https://contoso.sharepoint.com/sites/Europe"
 ```
 
-Removes a Home site specified by URL without prompting for confirmation.
+Removes a home site specified by URL without prompting for confirmation.
 
 ```sh
 m365 spo homesite remove --url "https://contoso.sharepoint.com/sites/Europe" --force
