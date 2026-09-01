@@ -5,6 +5,26 @@ sidebar_position: 4
 
 # Release notes
 
+## [v11.11.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.11.0)
+
+### New commands
+
+**Entra ID:**
+
+- [entra agent list](../cmd/entra/agent/agent-list.mdx) - retrieves a list of agents [#7255](https://github.com/pnp/cli-microsoft365/issues/7255)
+
+### Changes
+
+- added minimal permissions for `spo folder` commands [#7276](https://github.com/pnp/cli-microsoft365/issues/7276)
+- added minimal permissions for `spo file version` commands [#7272](https://github.com/pnp/cli-microsoft365/issues/7272)
+- added minimal permissions for `todo task` commands [#7534](https://github.com/pnp/cli-microsoft365/issues/7534)
+- added minimal permissions for `todo list` commands [#7533](https://github.com/pnp/cli-microsoft365/issues/7533)
+- migrated `pp aibuildermodel`, `pp copilot`, and `pp dataverse` commands to Zod [#7313](https://github.com/pnp/cli-microsoft365/issues/7313)
+- migrated `pp gateway`, `pp managementapp`, `pp solution`, and `pp tenant` commands to Zod [#7314](https://github.com/pnp/cli-microsoft365/issues/7314)
+- added minimal permissions for `spo group` commands [#7277](https://github.com/pnp/cli-microsoft365/issues/7277)
+- fixed `spo user get` retrieving user by id [#7458](https://github.com/pnp/cli-microsoft365/issues/7458)
+- fixed apostrophe in file name using `spo file add` [#7552](https://github.com/pnp/cli-microsoft365/issues/#7552)
+
 ## [v11.10.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.10.0)
 
 ### New commands

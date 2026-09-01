@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo group member remove
 
@@ -40,6 +42,27 @@ m365 spo group member remove [options]
 ```
 
 <Global />
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions          |
+  |-----------------|----------------------|
+  | Microsoft Graph | User.Read.All        |
+  | SharePoint      | AllSites.FullControl |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions           |
+  |-----------------|-----------------------|
+  | Microsoft Graph | User.Read.All         |
+  | SharePoint      | Sites.FullControl.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 
