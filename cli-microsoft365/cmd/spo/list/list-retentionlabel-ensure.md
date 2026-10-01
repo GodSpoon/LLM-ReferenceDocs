@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo list retentionlabel ensure
 
@@ -38,6 +40,25 @@ m365 spo list retentionlabel ensure [options]
 ## Remarks
 
 A list retention label is a default label that will be applied to all new items in the list. If you specify `syncToItems`, it is also synced to existing items. 
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions    |
+  |------------|----------------|
+  | SharePoint | AllSites.Write |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions         |
+  |------------|---------------------|
+  | SharePoint | Sites.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

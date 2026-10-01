@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo list sensitivitylabel ensure
 
@@ -42,6 +44,27 @@ m365 spo list sensitivitylabel ensure [options]
 This command is based on an API that is currently in preview and is subject to change once the API reaches general availability.
 
 :::
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                      |
+  |-----------------|----------------------------------|
+  | Microsoft Graph | InformationProtectionPolicy.Read |
+  | SharePoint      | AllSites.Write                   |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                          |
+  |-----------------|--------------------------------------|
+  | Microsoft Graph | InformationProtectionPolicy.Read.All |
+  | SharePoint      | Sites.ReadWrite.All                  |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # teams app uninstall
 
@@ -30,6 +32,25 @@ m365 teams app uninstall [options]
 
 The `id` has to be the id the app instance installed in the Microsoft Teams team.
 Do not use the ID from the manifest of the zip app package or the id from the Microsoft Teams App Catalog.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                           |
+  |-----------------|---------------------------------------|
+  | Microsoft Graph | TeamsAppInstallation.ReadWriteForTeam |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                               |
+  |-----------------|-------------------------------------------|
+  | Microsoft Graph | EXAMPLE_SECRET_VALUE_PLACEHOLDER |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

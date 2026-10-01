@@ -28,8 +28,8 @@ m365 spe container remove [options]
 `--containerTypeName [containerTypeName]`
 : The name of the container type. Specify either `containerTypeId` or `containerTypeName` when using `name` but not both.
 
-`--recycle`
-: Recycle the container instance instead of permanently deleting it.
+`--permanent`
+: Permanently delete the container instance instead of moving it to the recycle bin.
 
 `-f, --force`
 : Do not prompt for confirmation.
@@ -68,16 +68,16 @@ The command is based on an API that is currently in preview and is subject to ch
 
 ## Examples
 
-Remove a container by ID.
+Move a container specified by ID to the recycle bin.
 
 ```sh
 m365 spe container remove --id "b!EXAMPLE_SECRET_VALUE_PLACEHOLDER"
 ```
 
-Move a container specified by ID to the recycle bin.
+Permanently remove a container by ID.
 
 ```sh
-m365 spe container remove --id "b!EXAMPLE_SECRET_VALUE_PLACEHOLDER" --recycle
+m365 spe container remove --id "b!EXAMPLE_SECRET_VALUE_PLACEHOLDER" --permanent
 ```
 
 Remove a container by name specifying the container type id.

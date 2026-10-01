@@ -22,6 +22,25 @@ m365 tenant people pronouns set [options]
 
 <Global />
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                  |
+  |-----------------|------------------------------|
+  | Microsoft Graph | PeopleSettings.ReadWrite.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                  |
+  |-----------------|------------------------------|
+  | Microsoft Graph | PeopleSettings.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Enable pronouns in the organization

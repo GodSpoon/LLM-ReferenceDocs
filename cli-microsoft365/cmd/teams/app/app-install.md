@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # teams app install
 
@@ -35,6 +37,25 @@ m365 teams app install [options]
 ## Remarks
 
 The `id` has to be the ID of the app from the Microsoft Teams App Catalog. Do not use the ID from the manifest of the zip app package. Use the [teams app list](./app-list.mdx) command to get this ID instead.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                                                                                                         |
+  |-----------------|---------------------------------------------------------------------------------------------------------------------|
+  | Microsoft Graph | AppCatalog.Submit, TeamsAppInstallation.ReadWriteForTeam, TeamsAppInstallation.ReadWriteForUser, User.ReadBasic.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                                                                                                              |
+  |-----------------|--------------------------------------------------------------------------------------------------------------------------|
+  | Microsoft Graph | AppCatalog.Read.All, EXAMPLE_SECRET_VALUE_PLACEHOLDER, EXAMPLE_SECRET_VALUE_PLACEHOLDER, User.Read.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

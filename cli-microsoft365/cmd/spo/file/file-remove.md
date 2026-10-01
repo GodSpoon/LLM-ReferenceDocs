@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo file remove
 
@@ -29,8 +31,8 @@ m365 spo page template remove
 `--url [url]`
 : The server- or site-relative decoded URL of the file to remove. Specify either `id` or `url` but not both.
 
-`--recycle`
-: Recycle the file instead of actually deleting it.
+`--permanent`
+: Permanently delete the file instead of moving it to the recycle bin.
 
 `--bypassSharedLock`
 : Remove the file even if it is locked for shared use.
@@ -40,6 +42,25 @@ m365 spo page template remove
 ```
 
 <Global />
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions    |
+  |------------|----------------|
+  | SharePoint | AllSites.Write |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions         |
+  |------------|---------------------|
+  | SharePoint | Sites.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 
@@ -55,10 +76,10 @@ Remove a file by site-relative URL.
 m365 spo file remove --webUrl https://contoso.sharepoint.com/sites/project-x --url "/Shared Documents/Test.docx"
 ```
 
-Remove a file by server-relative URL to the recycle bin.
+Permanently remove a file by server-relative URL.
 
 ```sh
-m365 spo file remove --webUrl https://contoso.sharepoint.com/sites/project-x --url "/sites/project-x/Shared Documents/Test.docx" --recycle
+m365 spo file remove --webUrl https://contoso.sharepoint.com/sites/project-x --url "/sites/project-x/Shared Documents/Test.docx" --permanent
 ```
 
 Remove a file that is locked

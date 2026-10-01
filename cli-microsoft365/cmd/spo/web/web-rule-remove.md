@@ -13,12 +13,6 @@ Removes an alert from a SharePoint list
 m365 spo web rule remove [options]
 ```
 
-## Alias
-
-```sh
-m365 spo web alert remove
-```
-
 ## Options
 
 ```md definition-list

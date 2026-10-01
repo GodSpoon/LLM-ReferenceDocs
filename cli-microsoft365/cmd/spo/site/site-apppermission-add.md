@@ -35,12 +35,43 @@ m365 spo site apppermission add [options]
 
 To set permissions, specify at minimum either `appId` or `appDisplayName`. For best performance specify both values to avoid extra lookup.
 
-## Example
+## Permissions
 
-Grants the specified app the _read_ permission to site _https://contoso.sharepoint.com/sites/project-x_
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                                 |
+  |-----------------|---------------------------------------------|
+  | Microsoft Graph | Sites.FullControl.All, Application.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                                 |
+  |-----------------|---------------------------------------------|
+  | Microsoft Graph | Sites.FullControl.All, Application.Read.All |
+
+  </TabItem>
+</Tabs>
+
+## Examples
+
+Grants the app with the specified display name the _read_ permission to a specific site
 
 ```sh
 m365 spo site apppermission add --siteUrl https://contoso.sharepoint.com/sites/project-x --permission read --appDisplayName Foo
+```
+
+Grants the app with the specified ID the _write_ permission to a specific site
+
+```sh
+m365 spo site apppermission add --siteUrl https://contoso.sharepoint.com/sites/project-x --permission write --appId 5c89fbbf-670e-48e7-a0bc-fa8942c895a2
+```
+
+Grants the app with the specified ID and display name the _manage_ permission to a specific site
+
+```sh
+m365 spo site apppermission add --siteUrl https://contoso.sharepoint.com/sites/project-x --permission manage --appId 5c89fbbf-670e-48e7-a0bc-fa8942c895a2 --appDisplayName Foo
 ```
 
 ## Response
@@ -50,27 +81,27 @@ m365 spo site apppermission add --siteUrl https://contoso.sharepoint.com/sites/p
 
   ```json
   {
-  "id": "EXAMPLE_SECRET_VALUE_PLACEHOLDER",
-  "roles": [
-    "read"
-  ],
-  "grantedToIdentitiesV2": [
-    {
-      "application": {
-        "displayName": "Foo",
-        "id": "5c89fbbf-670e-48e7-a0bc-fa8942c895a2"
+    "id": "EXAMPLE_SECRET_VALUE_PLACEHOLDER",
+    "roles": [
+      "read"
+    ],
+    "grantedToIdentitiesV2": [
+      {
+        "application": {
+          "displayName": "Foo",
+          "id": "5c89fbbf-670e-48e7-a0bc-fa8942c895a2"
+        }
       }
-    }
-  ],
-  "grantedToIdentities": [
-    {
-      "application": {
-        "displayName": "Foo",
-        "id": "5c89fbbf-670e-48e7-a0bc-fa8942c895a2"
+    ],
+    "grantedToIdentities": [
+      {
+        "application": {
+          "displayName": "Foo",
+          "id": "5c89fbbf-670e-48e7-a0bc-fa8942c895a2"
+        }
       }
-    }
-  ]
-}
+    ]
+  }
   ```
 
   </TabItem>

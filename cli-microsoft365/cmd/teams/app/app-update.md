@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # teams app update
 
@@ -29,6 +31,23 @@ m365 teams app update [options]
 ## Remarks
 
 You can only update a Teams app as a global administrator.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions              |
+  |-----------------|--------------------------|
+  | Microsoft Graph | AppCatalog.ReadWrite.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  This command does not support application permissions.
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo list webhook remove
 
@@ -38,6 +40,25 @@ m365 spo list webhook remove [options]
 ## Remarks
 
 If the specified id doesn't refer to an existing webhook, you will get a `404 - "404 FILE NOT FOUND"` error.
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource   | Permissions    |
+  |------------|----------------|
+  | SharePoint | AllSites.Write |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource   | Permissions         |
+  |------------|---------------------|
+  | SharePoint | Sites.ReadWrite.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

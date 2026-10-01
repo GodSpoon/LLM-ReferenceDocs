@@ -22,6 +22,25 @@ m365 teams app list [options]
 
 <Global />
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions       |
+  |-----------------|-------------------|
+  | Microsoft Graph | AppCatalog.Submit |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions         |
+  |-----------------|---------------------|
+  | Microsoft Graph | AppCatalog.Read.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 List all apps from the Microsoft Teams app catalog

@@ -22,6 +22,25 @@ m365 tenant serviceannouncement healthissue list [options]
 
 <Global />
 
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions            |
+  |-----------------|------------------------|
+  | Microsoft Graph | ServiceHealth.Read.All |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions            |
+  |-----------------|------------------------|
+  | Microsoft Graph | ServiceHealth.Read.All |
+
+  </TabItem>
+</Tabs>
+
 ## Examples
 
 Get service health issues of all services in Microsoft 365

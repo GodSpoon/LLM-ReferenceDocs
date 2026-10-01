@@ -83,7 +83,7 @@ This command will only return a response if the content type is added to the sit
 
   ```json
   {
-    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#contentType",
+    "@odata.context": "https://contoso.sharepoint.com/_api/v2.0/$metadata#contentType",
     "@odata.type": "#microsoft.graph.contentType",
     "@odata.etag": "\"2\"",
     "id": "EXAMPLE_SECRET_VALUE_PLACEHOLDER",
@@ -111,7 +111,7 @@ This command will only return a response if the content type is added to the sit
    <TabItem value="Text">
 
   ```text
-  @odata.context: https://graph.microsoft.com/v1.0/$metadata#contentType
+  @odata.context: https://contoso.sharepoint.com/_api/v2.0/$metadata#contentType
   @odata.etag   : "2"
   @odata.type   : #microsoft.graph.contentType
   base          : {"id":"0x0101","description":"Create a new document.","group":"Document Content Types","hidden":false,"name":"Document","readOnly":false,"sealed":false}
@@ -131,7 +131,7 @@ This command will only return a response if the content type is added to the sit
 
   ```csv
   @odata.context,@odata.type,@odata.etag,id,isBuiltIn,description,group,hidden,name,parentId,readOnly,sealed
-  https://graph.microsoft.com/v1.0/$metadata#contentType,#microsoft.graph.contentType,"""2""",EXAMPLE_SECRET_VALUE_PLACEHOLDER,,,Custom Content Types,,Dummy,0x0101,1,
+  https://contoso.sharepoint.com/_api/v2.0/$metadata#contentType,#microsoft.graph.contentType,"""2""",EXAMPLE_SECRET_VALUE_PLACEHOLDER,,,Custom Content Types,,Dummy,0x0101,1,
   ```
 
   </TabItem>
@@ -146,7 +146,7 @@ This command will only return a response if the content type is added to the sit
 
   Property | Value
   ---------|-------
-  @odata.context | https://graph.microsoft.com/v1.0/$metadata#contentType
+  @odata.context | https://contoso.sharepoint.com/_api/v2.0/$metadata#contentType
   @odata.type | #microsoft.graph.contentType
   @odata.etag | "2"
   id | EXAMPLE_SECRET_VALUE_PLACEHOLDER

@@ -13,12 +13,6 @@ Lists all SharePoint list alerts
 m365 spo web rule list [options]
 ```
 
-## Alias
-
-```sh
-m365 spo web alert list
-```
-
 ## Options
 
 ```md definition-list
@@ -48,16 +42,18 @@ m365 spo web alert list
 <Tabs>
   <TabItem value="Delegated">
 
-  | Resource   | Permissions          |
-  |------------|----------------------|
-  | SharePoint | AllSites.FullControl |
+  | Resource        | Permissions          |
+  |-----------------|----------------------|
+  | SharePoint      | AllSites.FullControl |
+  | Microsoft Graph | User.ReadBasic.All   |
 
   </TabItem>
   <TabItem value="Application">
 
-  | Resource   | Permissions           |
-  |------------|-----------------------|
-  | SharePoint | Sites.FullControl.All |
+  | Resource        | Permissions           |
+  |-----------------|-----------------------|
+  | SharePoint      | Sites.FullControl.All |
+  | Microsoft Graph | User.ReadBasic.All    |
 
   </TabItem>
 </Tabs>

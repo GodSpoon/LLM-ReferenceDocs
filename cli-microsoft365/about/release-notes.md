@@ -5,6 +5,49 @@ sidebar_position: 4
 
 # Release notes
 
+## v12.0.0
+
+### New commands
+
+**SharePoint:**
+
+- [spo web rule get](../cmd/spo/web/web-rule-get.mdx) - retrieves information about a specific alert from a SharePoint list [#6862](https://github.com/pnp/cli-microsoft365/issues/6862)
+
+### Changes
+
+- added minimal permissions for 'spo list' commands [#7484](https://github.com/pnp/cli-microsoft365/issues/7484)
+- added minimal permissions for 'spo listitem attachment' [#7485](https://github.com/pnp/cli-microsoft365/issues/7485)
+- added minimal permissions for 'spo list webhook' commands [#7483](https://github.com/pnp/cli-microsoft365/issues/7483)
+- added minimal permissions for 'spo list defaultvalue' commands [#7480](https://github.com/pnp/cli-microsoft365/issues/7480)
+- added minimal permissions for 'spo list view' commands [#7482](https://github.com/pnp/cli-microsoft365/issues/7482)
+- added minimal permissions for 'tenant miscellaneous' commands [#7530](https://github.com/pnp/cli-microsoft365/issues/7530)
+- added minimal permissions for 'spo file' commands [#7273](https://github.com/pnp/cli-microsoft365/issues/7273)
+- added minimal permissions for 'spo list related' commands [#7481](https://github.com/pnp/cli-microsoft365/issues/7481)
+- added minimal permissions for 'spo folder related' commands [#7274](https://github.com/pnp/cli-microsoft365/issues/7274)
+- added support for heft for spfx CI/CD commands [#7091](https://github.com/pnp/cli-microsoft365/issues/7091)
+- migrated `spo cdn` commands to Zod [#7321](https://github.com/pnp/cli-microsoft365/issues/7321)
+- enhanced `spo storageentity` commands to reference tenant app catalog [#7128](https://github.com/pnp/cli-microsoft365/issues/7128)
+- enhanced [spo site list](../cmd/spo/site/site-list.mdx) command [#6547](https://github.com/pnp/cli-microsoft365/issues/6547)
+- migrated `spo`, `spo homesite`, and `spo hidedefaultthemes` commands to Zod [#7330](https://github.com/pnp/cli-microsoft365/issues/7330)
+- migrated `spo user`, `spo userprofile`, and `spo web` commands to Zod [#7345](https://github.com/pnp/cli-microsoft365/issues/7345)
+- added minimal permissions for `teams app` commands [#7519](https://github.com/pnp/cli-microsoft365/issues/7519)
+- updated archive warnings in [spo file archive](../cmd/spo/file/file-archive.mdx), [spo file unarchive](../cmd/spo/file/file-unarchive.mdx), and [spo folder archive](../cmd/spo/folder/folder-archive.mdx) commands [#7576](https://github.com/pnp/cli-microsoft365/pull/7576)
+- enhanced [spo site apppermission add](../cmd/spo/site/site-apppermission-add.mdx) command documentation [#7575](https://github.com/pnp/cli-microsoft365/pull/7575)
+- enhanced the release workflow to support trusted publishing [#7261](https://github.com/pnp/cli-microsoft365/pull/7261)
+- enhanced custom MSAL cache plugin with msal-node-extensions [#7398](https://github.com/pnp/cli-microsoft365/pull/7398)
+- added minimal permissions for 'tenant serviceannouncement related' commands [#7532](https://github.com/pnp/cli-microsoft365/issues/7532)
+- added minimal permissions for 'tenant people profilecardproperty' commands [#7531](https://github.com/pnp/cli-microsoft365/issues/7531)
+
+### ⚠️ Breaking changes
+
+- changed the overwrite default for the [spo file add](../cmd/spo/file/file-add.mdx) command [#7100](https://github.com/pnp/cli-microsoft365/issues/7100)
+- renamed the `properties` option in the [spo listitem get](../cmd/spo/listitem/listitem-get.mdx) command [#7539](https://github.com/pnp/cli-microsoft365/issues/7539)
+- removed defaults from the [spo page header set](../cmd/spo/page/page-header-set.mdx) command [#7094](https://github.com/pnp/cli-microsoft365/issues/7094)
+- moved to SharePoint APIs in the [spo contenttype sync](../cmd/spo/contenttype/contenttype-sync.mdx) command [#7251](https://github.com/pnp/cli-microsoft365/issues/7251)
+- enhanced `teams` commands to use teams util [#7048](https://github.com/pnp/cli-microsoft365/issues/7048)
+- removed the `spo web alert list` and `spo web alert remove` aliases [#6865](https://github.com/pnp/cli-microsoft365/issues/6865)
+- replaced `recycle` option by `permanent` option and removed `skipRecycleBin` option in favor of `permanent` for `entra`, `spo`, and `spe` commands [#7110](https://github.com/pnp/cli-microsoft365/issues/7110)
+
 ## [v11.11.0](https://github.com/pnp/cli-microsoft365/releases/tag/v11.11.0)
 
 ### New commands
