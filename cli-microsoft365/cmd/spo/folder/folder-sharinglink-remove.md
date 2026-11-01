@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # spo folder sharinglink remove
 
@@ -21,7 +23,7 @@ m365 spo folder sharinglink remove [options]
 : The server- or site-relative decoded URL of the folder. Specify either `folderUrl` or `folderId` but not both.
 
 `--folderId [folderId]`
-: The UniqueId (GUID) of the folder. Specify either `folderUrl` or `folderId` but not both.
+: The unique ID (GUID) of the folder. Specify either `folderUrl` or `folderId` but not both.
 
 `-i, --id <id>`
 : The ID of the sharing link.
@@ -31,6 +33,27 @@ m365 spo folder sharinglink remove [options]
 ```
 
 <Global />
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions                     |
+  |-----------------|---------------------------------|
+  | Microsoft Graph | Files.ReadWrite, Sites.Read.All |
+  | SharePoint      | AllSites.Read                   |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                         |
+  |-----------------|-------------------------------------|
+  | Microsoft Graph | Files.ReadWrite.All, Sites.Read.All |
+  | SharePoint      | Sites.Read.All                      |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

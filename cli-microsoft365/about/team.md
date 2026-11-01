@@ -50,12 +50,6 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     x: 'machym_'
   },
   {
-    name: 'Mathijs Verbeeck',
-    company: 'Xylos',
-    github: 'MathijsVerbeeck',
-    x: 'mathijsverbeeck'
-  },
-  {
     name: 'Milan Holemans',
     company: 'Xylos',
     github: 'milanholemans',
@@ -142,6 +136,12 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     name: 'Andrew Moon',
     company: '',
     github: 'andrewjymoon',
+    x: ''
+  },
+  {
+    name: 'Anikesh Thakur',
+    company: 'American Express',
+    github: 'Anikesh348',
     x: ''
   },
   {
@@ -305,6 +305,12 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     company: 'Valo Intranet',
     github: 'erwinvanhunen',
     x: 'erwinvanhunen'
+  },
+  {
+    name: 'Fabian Hutzli',
+    company: '',
+    github: 'fabianhutzli',
+    x: ''
   },
   {
     name: 'Fredrik Thorild',
@@ -736,6 +742,12 @@ Do you want to know the curious and bright minds behind the CLI for Microsoft 36
     name: 'Santhosh Teja Piridi',
     company: '',
     github: 'santhosh-7777',
+    x: ''
+  },
+  {
+    name: 'Sarthak Shreshtha',
+    company: '',
+    github: 'Sarthak-Shreshtha01',
     x: ''
   },
   {

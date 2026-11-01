@@ -35,8 +35,6 @@ m365 spo orgassetslibrary list
 
 ## Response
 
-### Standard response
-
 <Tabs>
   <TabItem value="JSON">
 
@@ -83,25 +81,6 @@ m365 spo orgassetslibrary list
   Property | Value
   ---------|-------
   Url | /
-  ```
-
-  </TabItem>
-</Tabs>
-
-### Response when no library is assigned as asset library
-
-<Tabs>
-  <TabItem value="Text">
-
-  ```text
-  No libraries in Organization Assets
-  ```
-
-  </TabItem>
-  <TabItem value="Markdown">
-
-  ```md
-  No libraries in Organization Assets
   ```
 
   </TabItem>

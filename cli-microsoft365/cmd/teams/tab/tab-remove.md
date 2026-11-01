@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # teams tab remove
 
@@ -28,6 +30,25 @@ m365 teams tab remove [options]
 ```
 
 <Global />
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions               |
+  |-----------------|---------------------------|
+  | Microsoft Graph | TeamsTab.ReadWriteForTeam |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions                   |
+  |-----------------|-------------------------------|
+  | Microsoft Graph | TeamsTab.ReadWriteForTeam.All |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

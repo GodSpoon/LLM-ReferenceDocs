@@ -23,7 +23,7 @@ m365 spo file sharinglink set [options]
 :	The server- or site-relative decoded URL of the file. Specify either `fileUrl` or `fileId` but not both.
 
 `--fileId [fileId]`
-:	The UniqueId (GUID) of the file. Specify either `fileUrl` or `fileId` but not both.
+:	The unique ID (GUID) of the file. Specify either `fileUrl` or `fileId` but not both.
 
 `--id <id>`
 : The ID of the sharing link.
@@ -33,6 +33,27 @@ m365 spo file sharinglink set [options]
 ```
 
 <Global />
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource        | Permissions     |
+  |-----------------|-----------------|
+  | Microsoft Graph | Files.ReadWrite |
+  | SharePoint      | AllSites.Read   |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  | Resource        | Permissions         |
+  |-----------------|---------------------|
+  | Microsoft Graph | Files.ReadWrite.All |
+  | SharePoint      | Sites.Read.All      |
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 

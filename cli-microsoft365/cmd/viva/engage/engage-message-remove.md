@@ -1,5 +1,7 @@
 -e <!-- DISCLAIMER: All secrets, passwords, and sensitive values in this document are examples only and not real credentials. -->
 import Global from '../../_global.mdx';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # viva engage message remove
 
@@ -36,6 +38,23 @@ To remove a message, you must either:
 - have posted the message yourself
 - be an administrator of the group the message was posted to or
 - be an admin of the network the message is in
+
+## Permissions
+
+<Tabs>
+  <TabItem value="Delegated">
+
+  | Resource | Permissions        |
+  |----------|--------------------|
+  | Yammer   | user_impersonation |
+
+  </TabItem>
+  <TabItem value="Application">
+
+  This command does not support application permissions.
+
+  </TabItem>
+</Tabs>
 
 ## Examples
 
